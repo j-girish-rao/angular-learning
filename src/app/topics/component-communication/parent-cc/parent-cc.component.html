@@ -32,7 +32,13 @@
 <br/>
 
 <div>c. {{topic3}}</div>
-<div></div>
+<div>Allows child component to be injected into parent component. It will give parent access to its properties and functions. Child wont be available to give access until the view has been initialized. This means we have to implement ngAfterViewInit lifecycle hook to receive to see the data from the child.</div>
+<div>Following is an example</div>
+<div>
+    <app-child-viewchild></app-child-viewchild>
+    <button (click)="getMessageFromChild()">Click : Get message from child.</button> &nbsp;
+    <button (click)="addNumberFromChild()">Click : To add two numbers.</button>
+</div>
 <br/>
 
 <div>d. {{topic4}}</div>

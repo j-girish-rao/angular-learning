@@ -10,6 +10,7 @@ import { TextInterpolationComponent } from './topics/text-interpolation/text-int
 import { ParentCcComponent } from './topics/component-communication/parent-cc/parent-cc.component';
 import { ChildCcComponent } from './topics/component-communication/child-cc/child-cc.component';
 import { ChildOutputComponent } from './topics/component-communication/child-output/child-output.component';
+import { ChildViewchildComponent } from './topics/component-communication/child-viewchild/child-viewchild.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ChildOutputComponent } from './topics/component-communication/child-out
     TextInterpolationComponent,
     ParentCcComponent,
     ChildCcComponent,
-    ChildOutputComponent
+    ChildOutputComponent,
+    ChildViewchildComponent
   ],
   imports: [
     BrowserModule,

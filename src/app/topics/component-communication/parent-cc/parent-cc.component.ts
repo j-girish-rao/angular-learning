@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+import { ChildViewchildComponent } from '../child-viewchild/child-viewchild.component';
 
 @Component({
   selector: 'app-parent-cc',
   templateUrl: './parent-cc.component.html',
   styleUrls: ['./parent-cc.component.scss']
 })
-export class ParentCcComponent implements OnInit {
+export class ParentCcComponent implements AfterViewInit {
 
     binding : string = '';
 
@@ -20,6 +21,8 @@ export class ParentCcComponent implements OnInit {
     topic3 : string = '';
     topic4 : string = '';
 
+    @ViewChild(ChildViewchildComponent) childComp : any;
+
   constructor() { 
 
     this.binding = 'Binding (@Input and @Output)';
@@ -31,10 +34,18 @@ export class ParentCcComponent implements OnInit {
     this.topic2 = 'Binding - @Output';
     this.topic3 = 'Reference -  @ViewChild';
     this.topic4 = 'Reference - @ContentChild';
-
+    
   }
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
+  }
+
+  getMessageFromChild() {
+    alert(this.childComp.messageFromChildViewChild);
+  }
+
+  addNumberFromChild() {
+    alert('Sum of 10 and 100 : ' + this.childComp.addNumbers(10,100));
   }
 
   receiveName(name : string){

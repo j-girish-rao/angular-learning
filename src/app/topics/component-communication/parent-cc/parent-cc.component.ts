@@ -8,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class ParentCcComponent implements OnInit {
 
     binding : string = '';
+
+    outputBindingDescription : string = 'In this use case we will be sending data from child to parent component. Here in this case we would be using @Output() decorator.';
+
     reference : string = '';
     provider : string = '';
     templateOutlet : string = '';
@@ -28,9 +31,18 @@ export class ParentCcComponent implements OnInit {
     this.topic2 = 'Binding - @Output';
     this.topic3 = 'Reference -  @ViewChild';
     this.topic4 = 'Reference - @ContentChild';
+
   }
 
   ngOnInit(): void {
+  }
+
+  receiveName(name : string){
+    alert('Hi my name is ' + name + '!');
+  }
+
+  receiveHomePin(pincode : number){
+    alert('And im from ' + pincode + '.');
   }
 
 }

@@ -9,6 +9,7 @@ import { LifecycleHooksComponent } from './topics/lifecycle-hooks/lifecycle-hook
 import { TextInterpolationComponent } from './topics/text-interpolation/text-interpolation.component';
 import { ParentCcComponent } from './topics/component-communication/parent-cc/parent-cc.component';
 import { ChildCcComponent } from './topics/component-communication/child-cc/child-cc.component';
+import { ChildOutputComponent } from './topics/component-communication/child-output/child-output.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ChildCcComponent } from './topics/component-communication/child-cc/chil
     LifecycleHooksComponent,
     TextInterpolationComponent,
     ParentCcComponent,
-    ChildCcComponent
+    ChildCcComponent,
+    ChildOutputComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,20 @@
+<div>
+    Component life is just like life of a component. They get created, they change and grow then get destroyed.
+</div>
+<div>
+    Following component life cycle :
+</div>
+<pre>
+    constructor()                   // Mostly used.
+    ngOnChanges()                   // Mostly used.
+    ngOnInit()                      // Mostly used.
+    ngDoCheck()
+        ngAfterContentInit()
+        ngAfterContentChecked()
+        ngAfterViewInit()
+        ngAfterViewChecked()
+    ngOnDestroy()                   // Mostly used.
+</pre>
+<div>
+    constructor(), ngOnChanges(), ngOnInit() and ngOnDestroy() are widely used. An example lifecycle hooks is implemented in lifecycle-hooks.components.ts.
+</div>

@@ -5,6 +5,8 @@ import { AngularCompComponent } from './topics/angular-comp/angular-comp.compone
 import { TextInterpolationComponent } from './topics/text-interpolation/text-interpolation.component';
 import { LifecycleHooksComponent } from './topics/lifecycle-hooks/lifecycle-hooks.component';
 import { ParentCcComponent } from './topics/component-communication/parent-cc/parent-cc.component';
+import { ComponentStylingComponent } from './topics/component-styling/component-styling.component';
+import { NgContentParentComponent } from './topics/ng_content/ng-content-parent/ng-content-parent.component';
 
 const routes: Routes = [
   { path: '', component: GettingStartedComponent },
@@ -12,7 +14,9 @@ const routes: Routes = [
   { path: 'angular-comp', component: AngularCompComponent },
   { path: 'lifecycle-hooks', component: LifecycleHooksComponent },
   { path: 'text-interpol', component: TextInterpolationComponent },
-  { path: 'comp-communication', component: ParentCcComponent}
+  { path: 'comp-communication', component: ParentCcComponent},
+  { path: 'comp-styling', component: ComponentStylingComponent },
+  { path: 'ng_content', component: NgContentParentComponent}
 ];
 
 @NgModule({

@@ -1,0 +1,36 @@
+<div>Component Styling</div>
+<div>-------------------</div>
+<div>
+    There  are three ways to add style to component.
+</div>
+<br/>
+
+<div class="color-red">a. By setting styles or styleUrls metadata (To add this in component).</div>
+<div class="color-red">
+    Add styles in component as either styles or styleUrls. In component css can be referred as style and styleUrls, where in styles we declare styles and in styleUrls we refer reference of style file.
+</div>
+<pre class="color-red">
+    Example 1 : {{strStyle}}
+    Example 2 : {{strStyleUrls}}  
+</pre>
+<br/>
+
+<div class="color-green">b. Inline in HTML template.</div>
+<div class="color-green">
+    Writing style tag ih html template. For example : {{styleTagInHtml}}<br/>This tag can be included html and css styling can be applied. And also can link css styling url in html template.
+</div>
+<br/>
+
+<div class="color-violet">c. With CSS imports.</div>
+<div class="color-violet">
+    We can import other styles into the *.scss or *.css file. And hence this applies styles to this specific component.
+</div>
+<br/>
+<div>
+    By default the component styles are applied to the specific component. By default view encapsulation is set to 'Emulated'. Which emulates the behaviour of the shadow DOM by pre-processing and renaming CSS code to effectively scope
+    CSS to components view. 
+    <br/>
+    We can remove the additional CSS selectors by setting encapsulation to none(encapsulation: ViewEncapsulation.None).
+    <br/>
+    We can define global styles in styles.css file which applies css globally. Another way of doing it by defining a new CSS file and including the file reference in angular.json styles section.
+</div>

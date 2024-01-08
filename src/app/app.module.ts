@@ -11,6 +11,9 @@ import { ParentCcComponent } from './topics/component-communication/parent-cc/pa
 import { ChildCcComponent } from './topics/component-communication/child-cc/child-cc.component';
 import { ChildOutputComponent } from './topics/component-communication/child-output/child-output.component';
 import { ChildViewchildComponent } from './topics/component-communication/child-viewchild/child-viewchild.component';
+import { ComponentStylingComponent } from './topics/component-styling/component-styling.component';
+import { NgContentParentComponent } from './topics/ng_content/ng-content-parent/ng-content-parent.component';
+import { NgContentChildComponent } from './topics/ng_content/ng-content-child/ng-content-child.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { ChildViewchildComponent } from './topics/component-communication/child-
     ParentCcComponent,
     ChildCcComponent,
     ChildOutputComponent,
-    ChildViewchildComponent
+    ChildViewchildComponent,
+    ComponentStylingComponent,
+    NgContentParentComponent,
+    NgContentChildComponent
   ],
   imports: [
     BrowserModule,

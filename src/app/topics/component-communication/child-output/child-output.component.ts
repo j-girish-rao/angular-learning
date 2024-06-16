@@ -25,7 +25,7 @@ export class ChildOutputComponent implements OnInit {
   }
 
   sendNumberMessage() {
-    this.sendHomePin.emit(583118);
+    this.sendHomePin.emit(583201);
   }
 
 }

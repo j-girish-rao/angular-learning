@@ -1,0 +1,46 @@
+<div>Property Binding</div>
+<div>-------------------</div>
+
+<div>
+Property binding moves a value in one direction. Value goes from class property to target html. Property bidning helps set values of HTML elements or directives.
+Following are example of Property binding.3 
+</div>
+<div>
+    <button [disabled]="isUnchanged">Disabled Button</button>
+    Here in button [disabled]="isUnchanged", disabled is the property and isUnchanged is the value thats been passed from component. 
+</div>
+<div>
+    With interpolation you can achieve the same result.
+    button [disabled]="isUnchanged" //This is property binding.<br/>
+    button disabled="{{disabledText}}" //This is interpolation.
+    Both work as same until evaluation of template expression shouldn't have no visible side effects.
+</div>
+<br/><br/>
+<div>Attribute binding | Property Binding</div>
+<div>----------------------------------------</div>
+<div>
+    Following is an example of attribute binding.<br/>
+    {{AttributeBindingExample1}}
+    <br/> Example : {{AttributeBindingExample2}}
+</div>
+
+<br/><br/>
+<div>Class | Property Binding</div>
+<div>--------------------------</div>
+    Following is an examples of Class binding<br/>
+    {{ClassBindingExample1}}
+    <br/><br/><div>Inspect element to view the result of following two class binding examples.</div>
+    Eg 1 : <div [class.sale]="onSale">Is class applied | true</div>
+    Eg 2 : <div [class.sale]="onSaleFalse">Is class applied | false</div>
+    Eg 3 : {{ClassBindingExample2}} // Here classOne and classTwo are passed as a parameter to class attribute where both the classes gets applied.  <br/> 
+    Eg 4 : {{ClassBindingExample3}} // Here only classOne is applied as classTwo is false.
+
+<br/><br/>
+<div>Style | Property Binding</div>
+<div>--------------------------</div>
+Used to set styles dynamically.
+Following is an examples of Style binding.<br/>
+    Eg 1 : {{StyleBindingExample1}} //Style attribute can be called assigned.     <br/>
+    Eg 2 : {{StyleBindingExample2}} //Even camel case also be used to apply for a style attribure.    <br/>
+    Eg 3 : {{StyleBindingExample3}} //In this case style list is passed as a parameter.     <br/>
+    Eg 4 : {{StyleBindingExample4}} //Here style is applied as json file where each property in json file gets applied.     <br/><br/>

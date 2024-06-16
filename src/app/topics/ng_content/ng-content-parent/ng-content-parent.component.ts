@@ -7,7 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NgContentParentComponent implements OnInit {
 
-  constructor() { }
+  ngContent1 : string = '';
+  ngContent2 : string = '';
+  ngContent3 : string = '';
+
+  constructor() {
+    this.ngContent1 = '<ng-content [question]></ng-content>';
+    this.ngContent2 = '<ng-content [answer]></ng-content>';
+    this.ngContent3 = '<h3>What is capital of India ?</h3><p>New Delhi</p>';
+   }
 
   ngOnInit(): void {
   }

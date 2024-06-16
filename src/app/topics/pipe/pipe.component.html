@@ -1,0 +1,31 @@
+<div>Pipes</div>
+<div>-----</div>
+<div>
+    Pipes are functions that accepts a input value and return a formatted value.
+</div>
+<pre>
+    For example : 
+    a. Currency 
+        Before : 100 | After : $100 // Dollar as prefix.
+    b. Weight
+        Before : 38.1903 | After 38.2 Kg  // Round of decimal to single digit and postfix Kg to indicate weight.
+    Likewish it can applied to format temprature and various other fields.
+</pre>
+<div>
+    <div>BuiltIn pipes from Angular</div>
+    <div>Date before pipe format : {{beforeFormatDate}}</div>
+    <div>Date after pipe format : {{beforeFormatDate | date}} // Date format  | date </div>
+    <div>Date after pipe format : {{beforeFormatDate | date : 'short'}} // Date format  | date : 'short'</div>
+    <div>Date after pipe format : {{beforeFormatDate | date : 'long'}} // Date format  | date : 'long'</div>
+</div>
+<br/>
+<div>
+    Pipes are executed only after it detects pure change to the input value.
+</div>
+<br/>
+<div>
+    <div>Custom Pipes</div>
+    <div>Here in example weight is the pipe that is created to postfix weight and round off value to single decimal place.</div>
+    <div>Before : {{weight_stu1}} | After : {{weight_stu1 | weightPipe}}</div>
+    <div>Before : {{weight_stu2}} | After : {{weight_stu2 | weightPipe}}</div>
+</div>

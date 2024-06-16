@@ -45,7 +45,8 @@ export class ParentCcComponent implements AfterViewInit {
   }
 
   addNumberFromChild() {
-    alert('Sum of 10 and 100 : ' + this.childComp.addNumbers(10,100));
+    let sum = this.childComp.addNumbers(10,100);
+    alert('Sum of 10 and 100 : ' + sum);
   }
 
   receiveName(name : string){

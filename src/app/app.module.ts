@@ -14,6 +14,13 @@ import { ChildViewchildComponent } from './topics/component-communication/child-
 import { ComponentStylingComponent } from './topics/component-styling/component-styling.component';
 import { NgContentParentComponent } from './topics/ng_content/ng-content-parent/ng-content-parent.component';
 import { NgContentChildComponent } from './topics/ng_content/ng-content-child/ng-content-child.component';
+import { TemplateStatComponent } from './topics/template-stat/template-stat.component';
+import { TestParentComponent } from './topics/test-comp/test-parent/test-parent.component';
+import { TestChildComponent } from './topics/test-comp/test-child/test-child.component';
+import { PipeComponent } from './topics/pipe/pipe.component';
+import { WeightPipePipe } from './topics/pipe/weight-pipe.pipe';
+import { PropertyBindingComponent } from './topics/property-binding/property-binding.component';
+import { EventBindingComponent } from './topics/event-binding/event-binding.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +35,14 @@ import { NgContentChildComponent } from './topics/ng_content/ng-content-child/ng
     ChildViewchildComponent,
     ComponentStylingComponent,
     NgContentParentComponent,
-    NgContentChildComponent
+    NgContentChildComponent,
+    TemplateStatComponent,
+    TestParentComponent,
+    TestChildComponent,
+    PipeComponent,
+    WeightPipePipe,
+    PropertyBindingComponent,
+    EventBindingComponent
   ],
   imports: [
     BrowserModule,

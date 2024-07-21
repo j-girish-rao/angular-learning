@@ -15,7 +15,7 @@ export class ChildCcComponent {
   @Output() messageEvent = new EventEmitter<string>();
 
   constructor() { 
-    this.labelMessage = 'Following is the message that is been passed from parent commponent.'
+    this.labelMessage = 'Following is the message that is been passed from parent commponent:'
     this.inputDescription = 'Data from parent can be sent to child component using @Input() decorator. Here in child component variable with @Input() is declared and from parent the value is passed. In parent component child css selector is included and parameter is initialized with the value. <app-child [childMessage]="Hi from parent."></app-child>';
   }
 

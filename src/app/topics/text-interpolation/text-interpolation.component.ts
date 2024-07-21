@@ -18,7 +18,7 @@ export class TextInterpolationComponent implements OnInit, OnDestroy {
   constructor() { 
 
     this.templateExpression = 'Template Expression : This is declared using double curly braces {{ variable_name_from_typescript }}. Its also called mustach systex.'
-    this.title = 'Hi from typescript.'
+    this.title = 'Hi from component.'
 
     this.example_1 = '{{title}}';
     this.example_2 = '{{1+10}}';

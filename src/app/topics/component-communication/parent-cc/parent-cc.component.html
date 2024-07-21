@@ -1,6 +1,10 @@
-<div>Component Communication</div>
-<div>--------------------------------</div>
-<div style="color: greenyellow;"> NOTE: ANYTHING IN () IS A REFERENCE TO MEMBER FUNCTION. AND ANY USEAGE IN [] IS A REFERENCE TO PROPERTY/MEMBER VARIABLE.</div>
+<div>
+    <label class="heading-topics">Component Communication</label>
+</div>
+
+<label style="color: greenyellow;font-size: 12px;font-weight: bold;">
+    NOTE : Anything in () is a reference to member function. And any useage in [] is a reference to property/member variable.
+</label>
 <div>
     Sending or sharing data from one component to another component. Following are the various types on component communication :
 </div>
@@ -11,27 +15,27 @@
     d. {{templateOutlet}}
 </pre>
 
-<div>a. {{topic1}}</div>
+<div><label class="sub-heading-topics-2">a. {{topic1}}</label></div>
 <div>
     In here we send data from parent to child using input decorator. Input decorator takes the value from parent and stores the value in child property. 
     Following is an example of input decorator.
-
+    <br/>
     <app-child-cc [childMessage]="'Hi from Parent!'" [parentStringMessage]="'Another message from Parent component.'"></app-child-cc>
 </div>
 <div></div> 
 <br/>
 
-<div>b. {{topic2}}</div>
+<div><label class="sub-heading-topics-2">b. {{topic2}}</label></div>
 <div>
     {{outputBindingDescription}} It marks a property in child component as a doorway to communicate with parent component. This is useful when we want to communicate on a event in child component to parent component.
     To raise an event output must have the type of event emitter. Its a class in angular core which is used to raise a custom events. Following is an example.
 </div>
 <div>
-    <app-child-output (sendName)="receiveName($event)" (sendHomePin)="receiveHomePin($event)"></app-child-output>
+    <app-child-output (sendName)="receiveName($event)" (sendHomePin)="receiveHomePin($event)" (sendPerson)="receivePerson($event)"></app-child-output>
 </div>
 <br/>
 
-<div>c. {{topic3}}</div>
+<div><label class="sub-heading-topics-2">c. {{topic3}}</label></div>
 <div>Allows child component to be injected into parent component. It will give parent access to its properties and functions. Child wont be available to give access until the view has been initialized. This means we have to implement ngAfterViewInit lifecycle hook to receive to see the data from the child.</div>
 <div>Following is an example</div>
 <div>
@@ -41,5 +45,5 @@
 </div>
 <br/>
 
-<div>d. {{topic4}}</div>
+<div><label class="sub-heading-topics-2">d. {{topic4}}</label></div>
 <div></div>

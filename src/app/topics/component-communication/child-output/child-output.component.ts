@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Person } from '../../model/Person';
 
 @Component({
   selector: 'app-child-output',
@@ -9,6 +10,7 @@ export class ChildOutputComponent implements OnInit {
 
   @Output() sendName = new EventEmitter<string>();
   @Output() sendHomePin = new EventEmitter<number>();
+  @Output() sendPerson = new EventEmitter<Person>();
 
   descriptionChild : string = '';
 
@@ -26,6 +28,11 @@ export class ChildOutputComponent implements OnInit {
 
   sendNumberMessage() {
     this.sendHomePin.emit(583201);
+  }
+
+  sendPersonDetails() {
+    var details = new Person('J','Girish','Rao', '07-June-1993','#1198, MMTC Colony, MJ Nagar 5th cross, MJ Nagar, Hospet - Karnataka');
+    this.sendPerson.emit(details);
   }
 
 }

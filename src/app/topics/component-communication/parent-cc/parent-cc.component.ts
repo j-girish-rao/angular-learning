@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { ChildViewchildComponent } from '../child-viewchild/child-viewchild.component';
+import { Person } from '../../model/Person';
 
 @Component({
   selector: 'app-parent-cc',
@@ -57,4 +58,7 @@ export class ParentCcComponent implements AfterViewInit {
     alert('And im from ' + pincode + '.');
   }
 
+  receivePerson(details : Person) {
+    alert(details.toDetails());
+  }
 }

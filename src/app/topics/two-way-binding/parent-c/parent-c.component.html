@@ -1,0 +1,40 @@
+<div>
+    <label class="heading-topics">Two way binding.</label>
+</div>
+<div>
+    Two way binding helps in sending data from component to html and vice versa. 
+    With this data or html can be taken as input and sent back to component.
+    <br/>
+    <b>NOTE : Two way binding is short hand of property binding and event binding.</b>
+</div>
+<div>
+    Systex of achieving two way binding is <b>[(variable_name_goes_here)]</b>. Which is dataMember[] and memberFunction().
+</div>
+<div>
+    Following are two example of two way binding.
+</div>
+<br/>
+<div>
+    <b>Example 1</b>
+</div>
+<div>
+    <label>Change font size : </label>
+    <label>{{fontSize}}</label>&nbsp;&nbsp;
+    <button (click)="inc()">+</button>&nbsp;&nbsp;<button (click)="dec()">-</button>
+    <div [style.font-size.px]="fontSize">Hi this is Girish.</div>
+</div>
+<br/>
+<div>
+    <b>Example 2</b>
+</div>
+<div>
+    <app-child-c [(color)]="backgroundColor"></app-child-c><br/>
+    <div [style.background]="backgroundColor" style="width:100px">From parent</div>
+    <div>
+        In this example the change in color is both property binding and event binding.
+        <br/>
+        {{bindingSyntex1}} | This is resolved to following.
+        <br/>
+        {{bindingSyntex2}}
+    </div>
+</div>

@@ -2,7 +2,7 @@
     <label class="heading-topics">NG-CONTENT</label>
 </div>
 
-<div>ng-content uses the content projection to take html of another component to be displayed inside it self. Tool intended for component resue.</div>
+<div>ng-content uses the content projection to take html of another component to be displayed inside it self. Tool intended for component reuse.</div>
 <div>When to use ng-content ?</div>
 <div>When we want to inject HTML into a component.</div>
 <div>In parent or root set the css selector of the component. In child define ng-content, and from parent pass the html content to the child that needs to be displayed.</div>
@@ -34,5 +34,9 @@
     <app-ng-content-child>
         <div question>Q. Who is P.M of India ?</div>
         <div answer>A. Na Modi.</div>
+    </app-ng-content-child>
+    
+    <app-ng-content-child>
+        <p note>This is the note that is from parent.</p>
     </app-ng-content-child>
 </div>

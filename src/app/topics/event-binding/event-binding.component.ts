@@ -15,7 +15,11 @@ export class EventBindingComponent implements OnInit {
   }
 
   showAlert(){
-    alert('hi');
+    alert('Click event');
+  }
+
+  showBlurAlert(){
+    alert('Blur event');
   }
 
 }

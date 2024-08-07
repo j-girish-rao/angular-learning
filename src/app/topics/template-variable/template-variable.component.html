@@ -1,0 +1,20 @@
+<div>
+    <label class="heading-topics">Template Variable</label>
+</div>
+<div><br/>
+    Helps use data from one part of the template to other part of template. 
+    Its a variable which is created in and identify component or element within template itself.
+    <br/><br/>
+    This can be used in case of respond to user input or finetune the applications form.
+    <br/><br/>
+    A # symbol is used to declare a template variable.
+    Eg : {{templateVariableExample}} // Here phone is the template variable and its value can be accessesed by phone.value.
+    <br/><br/>
+    <input #phone placeholder="Enter phone number" /> <button (click)="callPhone(phone.value)">Call</button>
+</div>
+<div>
+    <br/>
+    <b>What is the scope of template variable ?</b><br/>This can be used/accessed any where within its surrounding template.
+    Structural template such as ng-If, ng-For or ng-Template acts as templat boundary. 
+    You cannot access template variables outside of these boundaries.
+</div>

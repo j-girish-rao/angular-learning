@@ -25,6 +25,7 @@ export class PropertyBindingComponent implements OnInit {
   StyleBindingExample3 = '<div [style]="width : 100px; height : 50px; background : red;"></div>';
   StyleBindingExample4 = '<div [class]="{width : 100px, height : 50px}"></div>';
 
+  backgroundColour = '{classOne : true, classTwo : false}';
 
   ngOnInit(): void {
   }

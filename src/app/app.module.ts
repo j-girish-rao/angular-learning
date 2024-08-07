@@ -21,6 +21,9 @@ import { PipeComponent } from './topics/pipe/pipe.component';
 import { WeightPipePipe } from './topics/pipe/weight-pipe.pipe';
 import { PropertyBindingComponent } from './topics/property-binding/property-binding.component';
 import { EventBindingComponent } from './topics/event-binding/event-binding.component';
+import { ParentCComponent } from './topics/two-way-binding/parent-c/parent-c.component';
+import { ChildCComponent } from './topics/two-way-binding/child-c/child-c.component';
+import { TemplateVariableComponent } from './topics/template-variable/template-variable.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +45,10 @@ import { EventBindingComponent } from './topics/event-binding/event-binding.comp
     PipeComponent,
     WeightPipePipe,
     PropertyBindingComponent,
-    EventBindingComponent
+    EventBindingComponent,
+    ParentCComponent,
+    ChildCComponent,
+    TemplateVariableComponent
   ],
   imports: [
     BrowserModule,

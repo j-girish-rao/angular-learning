@@ -1,10 +1,22 @@
+<style>
+    .test-classOne {
+        background: yellowgreen;
+        width: 200px;
+    }
+
+    .test-classTwo {
+        background: orange;
+        width: 200px;
+    }
+
+</style>
 <div>
     <label class="heading-topics">Property Binding</label>
 </div>
 
 <div>
-Property binding moves a value in one direction. Value goes from class property to target html. Property bidning helps set values of HTML elements or directives.
-Following are example of Property binding.3 
+    Property binding moves a value in one direction. Value goes from class property to target html. Property bidning helps set values of HTML elements or directives.
+    Following are examples of Property binding.
 </div>
 <div>
     <button [disabled]="isUnchanged">Disabled Button</button>
@@ -26,26 +38,28 @@ Following are example of Property binding.3
     {{AttributeBindingExample1}}
     <br/> Example : {{AttributeBindingExample2}}
 </div>
-
 <br/>
 <div>
-    <label class="sub-heading-topics-2">Class | Property Binding</label>
+    <label class="sub-heading-topics-2">Class binding | Property Binding</label>
 </div>
     Following is an examples of Class binding<br/>
     {{ClassBindingExample1}}
     <br/><br/><div>Inspect element to view the result of following two class binding examples.</div>
-    Eg 1 : <div [class.sale]="onSale">Is class applied | true</div>
-    Eg 2 : <div [class.sale]="onSaleFalse">Is class applied | false</div>
+    <div [class.sale]="onSale">Eg 1 : Is class applied | true</div>
+    <div [class.sale]="onSaleFalse">Eg 2 : Is class applied | false</div>
     Eg 3 : {{ClassBindingExample2}} // Here classOne and classTwo are passed as a parameter to class attribute where both the classes gets applied.  <br/> 
-    Eg 4 : {{ClassBindingExample3}} // Here only classOne is applied as classTwo is false.
-
+    Eg 4 : {{ClassBindingExample3}} // Here only classOne is applied as classTwo is false.<br/> 
+    Eg 5 : <div [class.test-classOne]="'{{isUnchanged}}'"> background: yellowgreen </div>
+    Eg 6 : <div [class.test-classTwo]="'{{isUnchanged}}'"> background: orange </div>
+    Eg 7 : <div [class]="'test-classOne'"> background: orange </div>
+    Eg 8 : <div [class]="'{test-classOne : true, test-classTwo : false}'"> Hi </div>
+    Eg 9 : <div [class]="'{test-classOne : false, test-classTwo : true}'"> Hi </div>
 <br/><br/>
 <div>
-    <label class="sub-heading-topics-2">Style | Property Binding</label>
+    <label class="sub-heading-topics-2">Style binding | Property Binding</label>
 </div>
-Used to set styles dynamically.
-Following is an examples of Style binding.<br/>
-    Eg 1 : {{StyleBindingExample1}} //Style attribute can be called assigned.     <br/>
-    Eg 2 : {{StyleBindingExample2}} //Even camel case also be used to apply for a style attribure.    <br/>
-    Eg 3 : {{StyleBindingExample3}} //In this case style list is passed as a parameter.     <br/>
-    Eg 4 : {{StyleBindingExample4}} //Here style is applied as json file where each property in json file gets applied.     <br/><br/>
+Used to set styles dynamically. Following is an examples of Style binding. <br/>
+    Eg 1 : {{StyleBindingExample1}} //Style attribute can be called assigned. <br/>
+    Eg 2 : {{StyleBindingExample2}} //Even camel case also be used to apply for a style attribure. <br/>
+    Eg 3 : {{StyleBindingExample3}} //In this case style list is passed as a parameter. <br/>
+    Eg 4 : {{StyleBindingExample4}} //Here style is applied as json file where each property in json file gets applied. <br/><br/>

@@ -12,6 +12,8 @@ import { TestParentComponent } from './topics/test-comp/test-parent/test-parent.
 import { PipeComponent } from './topics/pipe/pipe.component';
 import { PropertyBindingComponent } from './topics/property-binding/property-binding.component';
 import { EventBindingComponent } from './topics/event-binding/event-binding.component';
+import { ParentCComponent } from './topics/two-way-binding/parent-c/parent-c.component';
+import { TemplateVariableComponent } from './topics/template-variable/template-variable.component';
 
 const routes: Routes = [
   { path: '', component: GettingStartedComponent },
@@ -26,6 +28,8 @@ const routes: Routes = [
   { path: 'pipe', component: PipeComponent },
   { path: 'property-binding', component: PropertyBindingComponent},
   { path: 'event-binding', component: EventBindingComponent},
+  { path: 'two-way-binding', component: ParentCComponent},
+  { path: 'template-var', component: TemplateVariableComponent},
   { path: 'test', component: TestParentComponent }
 ];
 

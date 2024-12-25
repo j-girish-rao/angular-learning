@@ -2,35 +2,42 @@
     <label class="heading-topics">NG-CONTENT</label>
 </div>
 
-<div>ng-content uses the content projection to take html of another component to be displayed inside it self. Tool intended for component reuse.</div>
-<div>When to use ng-content ?</div>
-<div>When we want to inject HTML into a component.</div>
-<div>In parent or root set the css selector of the component. In child define ng-content, and from parent pass the html content to the child that needs to be displayed.</div>
-<div>Following is an example.</div>
-<br/>
-
-<div>ng-content Parent Component</div>
-<app-ng-content-child>
-    <p>This is from parent.</p>
-</app-ng-content-child>
-
-<div>Here in above example "ng-content Parent Component" is from parent component and "This is from parent." is passed from parent component to child ng-content.</div>
 <div>
-    Multi Slot : Each slot can specify a CSS selector that determines which content goes in the slot. 
-    This pattern is referred to as multi-slot content projection. This can be used using select attribute of ng-content inside of you child component.
-    This can be achieved by adding one or more ng-content tag.
+    <div>ng-content uses the content projection to take html of another component to be displayed inside it self. Tool intended for component reuse.</div>
+    <div>When to use ng-content ?</div>
+    <div>When we want to inject HTML into a component.</div>
+    <div>In parent or root set the css selector of the component. In child define ng-content, and from parent pass the html content to the child that needs to be displayed.</div>
+    <div>Following is an example.</div>
+    <div>ng-content Parent Component</div>
 </div>
-<div>Following is an example.</div>
-<div>
+<div class="color-red"> 
+    <app-ng-content-child>
+        <p>This is from parent.</p>
+    </app-ng-content-child>
+</div>
+
+<div>  
+    <div>Here in above example "ng-content Parent Component" is from parent component and "This is from parent." is passed from parent component to child ng-content.</div>
+    <div>
+        Multi Slot : Each slot can specify a CSS selector that determines which content goes in the slot. 
+        This pattern is referred to as multi-slot content projection. This can be used using select attribute of ng-content inside of you child component.
+        This can be achieved by adding one or more ng-content tag.
+    </div>
+    <div>Following are few examples.</div>
+</div>
+
+<div class="color-green">
     In child component : <br/> {{ngContent1}}<br/>{{ngContent2}}<br/>
     In parent component : {{ngContent3}}
 </div>
-<div>
+<div class="color-red">
     <br/>
+    
     <app-ng-content-child>
         <div question>Q. What is capital of India?</div>
         <div answer>A. New Delhi</div>
     </app-ng-content-child><br/>
+    
     <app-ng-content-child>
         <div question>Q. Who is P.M of India ?</div>
         <div answer>A. Na Modi.</div>
@@ -39,4 +46,5 @@
     <app-ng-content-child>
         <p note>This is the note that is from parent.</p>
     </app-ng-content-child>
+
 </div>

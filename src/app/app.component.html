@@ -78,7 +78,7 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 16px;
-    width: 200px;
+    width: 250px;
   }
 
   .card {
@@ -87,8 +87,9 @@
     border: 1px solid #eee;
     background-color: #fafafa;
     /* height: 40px; */
-    width: 190px; 
-    margin: 0 8px 16px;
+    /* margin: 0 8px 16px; */
+    width: 240px; 
+    margin-top: 10px;
     padding: 16px;
     display: flex;
     flex-direction: row;
@@ -301,6 +302,11 @@
     }
   }
 
+  .adjust-height {
+    overflow-y: auto;
+    height: 550px;
+  }
+
   /* width */
   ::-webkit-scrollbar {
     width: 10px;
@@ -314,18 +320,13 @@
 
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #dedede; 
+    background: #00aaff; 
     border-radius: 10px;
   }
 
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #dedede;
-  }
-
-  .adjust-height {
-    overflow-y: auto;
-    height: 550px;
+    background: #00aaff;
   }
 </style>
 
@@ -387,21 +388,21 @@
           <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
         </a>
 
-        <!-- 4. Text interpol. -->
+        <!-- 4. Text interpolation -->
         <a class="card" tooltip="Text interpolation" routerLink="/text-interpol" routerLinkActive="active">
-          <span>4. Text interpol.</span>
+          <span>4. Text interpolation</span>
           <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
         </a>
 
         <!-- 5. Component communication -->
         <a class="card" tooltip="Component Communication" routerLink="/comp-communication" routerLinkActive="active">
-          <span>5. Comp. comm</span>
+          <span>5. Comp. communication</span>
           <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
         </a>
 
         <!-- 6. Component. Styling -->
         <a class="card" tooltip="Component Styling" routerLink="/comp-styling" routerLinkActive="active">
-          <span>6. Comp. Styling</span>
+          <span>6. Component Styling</span>
           <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
         </a>
 
@@ -411,9 +412,9 @@
           <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
         </a>
 
-        <!-- 8. Temp. Statement -->
+        <!-- 8. Template Statement -->
         <a class="card" tooltip="Template Statement" routerLink="/temp-stat" routerLinkActive="active">
-          <span>8. Temp. Statement</span>
+          <span>8. Template Statement</span>
           <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
         </a>
 
@@ -425,13 +426,13 @@
 
         <!-- 10. Property Binding -->
         <a class="card" tooltip="Property Binding" routerLink="/property-binding" routerLinkActive="active">
-          <span>10. Prop. Binding</span>
+          <span>10. Property Binding</span>
           <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
         </a>
 
         <!-- 11. Event Binding -->
         <a class="card" tooltip="Event Binding" routerLink="/event-binding" routerLinkActive="active">
-          <span>11. Eve. Binding</span>
+          <span>11. Event Binding</span>
           <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
         </a>
 
@@ -443,7 +444,7 @@
 
         <!-- 13. Template variable -->
         <a class="card" tooltip="Template variable" routerLink="/template-var" routerLinkActive="active">
-          <span>12. Template variable</span>
+          <span>13. Template variable</span>
           <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
         </a>
 

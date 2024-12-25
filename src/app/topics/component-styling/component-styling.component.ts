@@ -4,6 +4,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   selector: 'app-component-styling',
   templateUrl: './component-styling.component.html',
   styleUrls: ['./component-styling.component.scss'],
+  // encapsulation: ViewEncapsulation.None
 })
 export class ComponentStylingComponent implements OnInit {
 

@@ -13,13 +13,26 @@
         Before : 38.1903 | After 38.2 Kg // Round of decimal to single digit and postfix Kg to indicate weight. 
                                             Likewish it can applied to format temprature and various other fields.
 </pre>
+<pre>
+    Following are few builtIn pipes.
+        a. DataPipe
+        b. UpperCasePipe
+        c. CurrencyPipe
+        d. PercentPipe
+</pre>
+<pre>
+    Use this command to generate pipe.
+        ng g p greeting-pipe
+</pre>
 <div>
     <div>BuiltIn pipes from Angular</div>
-    <pre>Date before pipe format : {{beforeFormatDate}}</pre>
-    <pre>Date after pipe format : {{beforeFormatDate | date}}            // Date format  | date </pre>
-    <pre>Date after pipe format : {{beforeFormatDate | date : 'short'}}  // Date format  | date : 'short'</pre>
-    <pre>Date after pipe format : {{beforeFormatDate | date : 'long'}}   // Date format  | date : 'long'</pre>
+    <div>Date before pipe format : {{beforeFormatDate}}</div>
+    <div>Date after pipe format : {{beforeFormatDate | date}}            // Date format  | date </div>
+    <div>Date after pipe format : {{beforeFormatDate | date : 'short'}}  // Date format  | date : 'short'</div>
+    <div>Date after pipe format : {{beforeFormatDate | date : 'long'}}   // Date format  | date : 'long'</div>
 </div>
+<br/>
+<div>God's name : {{count_God | greetingPipe}}</div>
 <br/>
 <div>
     Pipes are executed only after it detects pure change to the input value.

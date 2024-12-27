@@ -1,6 +1,13 @@
 <ng-content></ng-content>
 
-<ng-content [question]></ng-content>
-<ng-content [answer]></ng-content>
+<div class="color-red">
+    <ng-content [question]></ng-content>
+</div>
 
-<ng-content [note]></ng-content>
+<div class="color-green">
+    <ng-content [answer]></ng-content>
+</div>
+
+<div class="color-violet">
+    <ng-content [note]></ng-content>
+</div>

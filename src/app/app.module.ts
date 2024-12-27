@@ -24,6 +24,7 @@ import { EventBindingComponent } from './topics/event-binding/event-binding.comp
 import { ParentCComponent } from './topics/two-way-binding/parent-c/parent-c.component';
 import { ChildCComponent } from './topics/two-way-binding/child-c/child-c.component';
 import { TemplateVariableComponent } from './topics/template-variable/template-variable.component';
+import { GreetingPipePipe } from './topics/pipe/greeting-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { TemplateVariableComponent } from './topics/template-variable/template-v
     TestChildComponent,
     PipeComponent,
     WeightPipePipe,
+    GreetingPipePipe,
     PropertyBindingComponent,
     EventBindingComponent,
     ParentCComponent,

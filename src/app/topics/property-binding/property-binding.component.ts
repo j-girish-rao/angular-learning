@@ -17,7 +17,7 @@ export class PropertyBindingComponent implements OnInit {
   ClassBindingExample1 = '<div [class.sale]="onSale"></div>';
   ClassBindingExample2 = '<div [class]="classOne classTwo"></div>';
   ClassBindingExample3 = '<div [class]="{classOne : true, classTwo : false}"></div>';
-  onSale = true;
+  onSaleTrue = true;
   onSaleFalse = false;
 
   StyleBindingExample1 = '<div [style.background-color]="expression"></div>';
@@ -26,6 +26,9 @@ export class PropertyBindingComponent implements OnInit {
   StyleBindingExample4 = '<div [class]="{width : 100px, height : 50px}"></div>';
 
   backgroundColour = '{classOne : true, classTwo : false}';
+
+  propertyBindingExample1 = '<image [src]="imageUrl" />';
+  interpolationExample1 = '<image src={{imageUrl}} />';
 
   ngOnInit(): void {
   }

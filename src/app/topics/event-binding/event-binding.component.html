@@ -1,3 +1,9 @@
+<style>
+    .class-b {
+        background-color: cornflowerblue;
+    }
+</style>
+
 <div>
     <label class="heading-topics">Event Binding</label>
 </div>
@@ -9,3 +15,10 @@ Following is an syntex : <br/>
 Example 1 : 
 <button (click)="showAlert()">Show Alert</button> // Here click is an event.
 <br/>
+Example 2 Click-Event : 
+<button (click)="alertMessage($event)" id="btnAlertEvent" [class]="alertBtnClass">Alert Message</button> // Here click is an event.<br/>
+Example 3 Pointer-Over : 
+<button (pointerover)="pointerOverEvent($event)" (pointerleave)="pointerLeaveEvent($event)" id="btnPointerOver">
+    Pointer hover Event, give a try
+</button>
+<label style="background-color: blueviolet;margin: 10px;padding: 0 15px 0 15px;">{{pointerOverEventData}}</label>

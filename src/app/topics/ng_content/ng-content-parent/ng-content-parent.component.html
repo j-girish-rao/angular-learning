@@ -27,12 +27,17 @@
 </div>
 
 <div class="color-green">
-    In child component : <br/> {{ngContent1}}<br/>{{ngContent2}}<br/>
-    In parent component : {{ngContent3}}
+    <b>In child component : Define what NG-Content does. </b><br/> {{ngContent1}}<br/>{{ngContent2}}<br/>
+    <b>In parent component : Pass the NG-CONTENT data from parent to child. </b><br/> {{ngContent3}}<br/>{{ngContent4}}<br/>
 </div>
-<div class="color-red">
+<div>
     <br/>
     
+    <app-ng-content-child>
+            This is a sample message from parent to child, passing data from parent to child component using ng-content.
+            Here in this case data is set in parent and sent to child component.
+    </app-ng-content-child>
+    <br/>
     <app-ng-content-child>
         <div question>Q. What is capital of India?</div>
         <div answer>A. New Delhi</div>
@@ -42,9 +47,9 @@
         <div question>Q. Who is P.M of India ?</div>
         <div answer>A. Na Modi.</div>
     </app-ng-content-child>
-    
+    <br/>
     <app-ng-content-child>
-        <p note>This is the note that is from parent.</p>
+        <div note>This is the note that is from parent.</div>
     </app-ng-content-child>
-
+    <br/>
 </div>

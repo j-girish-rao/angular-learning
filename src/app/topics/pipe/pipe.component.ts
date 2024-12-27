@@ -10,6 +10,8 @@ export class PipeComponent implements OnInit {
   beforeFormatDate : Date = new Date();
   weight_stu1 : number = 120.1234
   weight_stu2 : number = 81.74583
+  count_God : number = 7;
+
 
   constructor() { }
 

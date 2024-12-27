@@ -28,6 +28,11 @@
     button disabled="{{disabledText}}" //This is interpolation.
     Both work as same until evaluation of template expression shouldn't have no visible side effects.
 </div>
+<div>
+    {{propertyBindingExample1}} : This is Property binding.
+    <br/>
+    {{interpolationExample1}} : This is Interpolation.
+</div>
 <br/>
 <div>
     <label class="sub-heading-topics-2">Attribute binding | Property Binding</label>
@@ -45,7 +50,7 @@
     Following is an examples of Class binding<br/>
     {{ClassBindingExample1}}
     <br/><br/><div>Inspect element to view the result of following two class binding examples.</div>
-    <div [class.sale]="onSale">Eg 1 : Is class applied | true</div>
+    <div [class.sale]="onSaleTrue">Eg 1 : Is class applied | true</div>
     <div [class.sale]="onSaleFalse">Eg 2 : Is class applied | false</div>
     Eg 3 : {{ClassBindingExample2}} // Here classOne and classTwo are passed as a parameter to class attribute where both the classes gets applied.  <br/> 
     Eg 4 : {{ClassBindingExample3}} // Here only classOne is applied as classTwo is false.<br/> 
@@ -54,12 +59,12 @@
     Eg 7 : <div [class]="'test-classOne'"> background: orange </div>
     Eg 8 : <div [class]="'{test-classOne : true, test-classTwo : false}'"> Hi </div>
     Eg 9 : <div [class]="'{test-classOne : false, test-classTwo : true}'"> Hi </div>
-<br/><br/>
+<br/>
 <div>
     <label class="sub-heading-topics-2">Style binding | Property Binding</label>
 </div>
 Used to set styles dynamically. Following is an examples of Style binding. <br/>
-    Eg 1 : {{StyleBindingExample1}} //Style attribute can be called assigned. <br/>
-    Eg 2 : {{StyleBindingExample2}} //Even camel case also be used to apply for a style attribure. <br/>
-    Eg 3 : {{StyleBindingExample3}} //In this case style list is passed as a parameter. <br/>
-    Eg 4 : {{StyleBindingExample4}} //Here style is applied as json file where each property in json file gets applied. <br/><br/>
+    Eg 1 : {{StyleBindingExample1}} // Style attribute can be called assigned. <br/>
+    Eg 2 : {{StyleBindingExample2}} // Even camel case also be used to apply for a style attribure. <br/>
+    Eg 3 : {{StyleBindingExample3}} // In this case style list is passed as a parameter. <br/>
+    Eg 4 : {{StyleBindingExample4}} // Here style is applied as json object where each property in json object gets applied. <br/><br/>

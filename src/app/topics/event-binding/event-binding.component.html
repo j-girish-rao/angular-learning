@@ -1,12 +1,11 @@
-<style>
-    .class-b {
-        background-color: cornflowerblue;
-    }
-</style>
-
 <div>
     <label class="heading-topics">Event Binding</label>
 </div>
+
+<br/>
+<div class="sub-heading-topics">
+    a. Builtin Events
+</div><br/>
 
 Helps in listen for and respond to user actions. Key stroke, mouse movements, touch and movements.<br/>
 Following is an syntex : <br/>
@@ -18,7 +17,27 @@ Example 1 :
 Example 2 Click-Event : 
 <button (click)="alertMessage($event)" id="btnAlertEvent" [class]="alertBtnClass">Alert Message</button> // Here click is an event.<br/>
 Example 3 Pointer-Over : 
-<button (pointerover)="pointerOverEvent($event)" (pointerleave)="pointerLeaveEvent($event)" id="btnPointerOver">
-    Pointer hover Event, give a try
-</button>
-<label style="background-color: blueviolet;margin: 10px;padding: 0 15px 0 15px;">{{pointerOverEventData}}</label>
+<div style="display: flex;">
+    <div style="width:250px; height: 50px;margin: 10px; background-color: darkorange;" id="btnPointerOver" 
+        (pointerover)="pointerOverEvent($event)" 
+        (pointerleave)="pointerLeaveEvent($event)">
+        <span>Pointer hover Event, give a try.</span>
+    </div>
+    <div style="background-color: blueviolet; margin: 10px; width:250px; height: 50px;">
+        <span>{{pointerOverEventData}}</span>
+    </div>
+</div>
+
+<br/>
+<div class="sub-heading-topics">
+    b. Custom Events
+</div><br/>
+<div>
+    Here is the custom event call. Where from child using output data is returned to parent and handled in parent component.
+    <br/>
+    Syntex : {{customEventEmitterSyntex}}
+    <br/>
+        Here 'deleteEmitter' is a event emitter in child component which is handled with 'catchDeleteChildItem' in parent component.
+    <br/>
+    <app-event-binding-child (deleteEmitter)="deleteChildItem($event)"></app-event-binding-child>
+</div>

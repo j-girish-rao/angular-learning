@@ -3,7 +3,12 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-event-binding',
   templateUrl: './event-binding.component.html',
-  styleUrls: ['./event-binding.component.scss']
+  styles: [`.sub-heading-topics {
+      font-size: 15px;
+      color: violet;
+      font-style: italic;
+      font-weight: 500;
+    }`]
 })
 export class EventBindingComponent implements OnInit {
 
@@ -12,6 +17,7 @@ export class EventBindingComponent implements OnInit {
   eventBindSyntex = '<button (targetEvent)="templateStatement"></button>';
   alertBtnClass = 'class-a class-b';
   pointerOverEventData = 'Start';
+  customEventEmitterSyntex : string = '<app-event-binding-child (deleteEmitter)="catchDeleteChildItem($event)"></app-event-binding-child>';
 
   ngOnInit(): void {
   }
@@ -26,11 +32,15 @@ export class EventBindingComponent implements OnInit {
   }
 
   pointerOverEvent(event : any){
-    this.pointerOverEventData = 'Over';
+    this.pointerOverEventData = 'PointerOverEvent() called.';
   }
 
   pointerLeaveEvent(event : any){
-    this.pointerOverEventData = 'Leave';
+    this.pointerOverEventData = 'PointerLeaveEvent() called.';
+  }
+
+  deleteChildItem(item : any){
+    alert('Deleted item in child : ' + item);
   }
 
 }

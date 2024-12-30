@@ -12,6 +12,8 @@ export class ChildCComponent implements OnInit {
   @Input() color : string = '';
   @Output() colorChange = new EventEmitter<string>();
 
+  displayWidth : string = '75px';
+
   ngOnInit(): void {
   }
 
@@ -19,4 +21,5 @@ export class ChildCComponent implements OnInit {
     this.color = bgColor;
     this.colorChange.emit(bgColor);
   }
+
 }

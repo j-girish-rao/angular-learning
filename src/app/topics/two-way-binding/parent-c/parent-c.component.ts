@@ -13,6 +13,8 @@ export class ParentCComponent implements OnInit {
   backgroundColor : string = 'red';
   bindingSyntex1 : string = '<app-child [color]=backgroundColor" (colorChange)="backgroundColor"></app-child>';
   bindingSyntex2 : string = '<app-child [(color)]="backgroundColor"></app-child>';
+  displayWidthParent : string = '85px';
+  syatexExample : string = "<ap-child-comp [(shareData)]='receivedData'></ap-child-comp>.";
 
   ngOnInit(): void {
   }
@@ -24,4 +26,5 @@ export class ParentCComponent implements OnInit {
   dec() {
     this.fontSize = --this.fontSize;
   }
+
 }

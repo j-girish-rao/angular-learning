@@ -2,9 +2,12 @@
     <label class="heading-topics">Two way binding.</label>
 </div>
 <div>
-    Two way binding helps in sending data from component to html and vice versa. 
-    With this data or html can be taken as input and sent back to component.
-    <br/>
+    Two way binding is the concept of sharing and giving. Two way binding gives application a way to share data, use two Way
+    binding to listen to events and update values simultaniously between parent and child components.
+    Syntex : Combination of [] and (). 
+    <br/><b>For instance {{syatexExample}}</b>
+    <br/> "shareData" is a property in child component and "receivedData" is a property in parent component.
+    <br/><br/>
     <b>NOTE : Two way binding is short hand of property binding and event binding.</b>
 </div>
 <div>
@@ -19,8 +22,9 @@
 </div>
 <div>
     <label>Change font size : </label>
-    <label>{{fontSize}}</label>&nbsp;&nbsp;
-    <button (click)="inc()">+</button>&nbsp;&nbsp;<button (click)="dec()">-</button>
+    <label>{{fontSize}}</label>&nbsp;
+    <button (click)="inc()">+</button>
+    <button (click)="dec()">-</button>
     <div [style.font-size.px]="fontSize">Hi this is Girish.</div>
 </div>
 <br/>
@@ -30,7 +34,7 @@
 </div>
 <div>
     <app-child-c [(color)]="backgroundColor"></app-child-c><br/>
-    <div [style.background]="backgroundColor" style="width:100px">From parent</div>
+    <div [style.background]="backgroundColor" [style.width]="displayWidthParent">&nbsp;From Parent</div>
     <div>
         In this example the change in color is both property binding and event binding.
         <br/>

@@ -22,7 +22,7 @@ export class EventBindingComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  showAlert(){
+  showAlert() {
     alert('Click event');
   }
 
@@ -31,15 +31,15 @@ export class EventBindingComponent implements OnInit {
     console.log(event);
   }
 
-  pointerOverEvent(event : any){
+  pointerOverEvent(event : any) {
     this.pointerOverEventData = 'PointerOverEvent() called.';
   }
 
-  pointerLeaveEvent(event : any){
+  pointerLeaveEvent(event : any) {
     this.pointerOverEventData = 'PointerLeaveEvent() called.';
   }
 
-  deleteChildItem(item : any){
+  deleteChildItem(item : any) {
     alert('Deleted item in child : ' + item);
   }
 

@@ -34,7 +34,7 @@
 </div>
 <div>
     <app-child-c [(color)]="backgroundColor"></app-child-c><br/>
-    <div [style.background]="backgroundColor" [style.width]="displayWidthParent">&nbsp;From Parent</div>
+    <div [style.background]="backgroundColor" [style.width]="displayWidthParent">&nbsp;Parent received the color as input from child.</div>
     <div>
         In this example the change in color is both property binding and event binding.
         <br/>

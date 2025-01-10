@@ -1,0 +1,12 @@
+.button-css {
+    width: 120px;
+    background: darkslateblue;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+    margin: 0 3px 0 3px;
+    &:hover {
+        border: 1px solid crimson;
+    }
+}

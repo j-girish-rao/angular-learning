@@ -15,6 +15,13 @@ export class TemplateVariableComponent implements OnInit {
   }
 
   callPhone(phoneNumber : string){
+    console.log('Phone number : ' + phoneNumber);
     alert('Phone number : ' + phoneNumber);
   }
+
+  sendMail (email : string) {
+    console.log('Email : ' + email);
+    alert('Email : ' + email);
+  }
+
 }

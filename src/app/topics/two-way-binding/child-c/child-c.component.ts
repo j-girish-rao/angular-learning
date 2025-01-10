@@ -13,6 +13,8 @@ export class ChildCComponent implements OnInit {
   @Output() colorChange = new EventEmitter<string>();
 
   displayWidth : string = '75px';
+  applyButtonCss : boolean = true;
+  disableButtonCss : boolean = false;
 
   ngOnInit(): void {
   }

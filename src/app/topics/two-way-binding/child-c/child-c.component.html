@@ -1,6 +1,6 @@
 Change color : 
-<button (click)="changeColor('red')">red</button>
-<button (click)="changeColor('blue')">blue</button>
-<button (click)="changeColor('green')">green</button>
+<button [class.button-css]="applyButtonCss" (click)="changeColor('red')">RED</button>
+<button [class.button-css]="disableButtonCss" (click)="changeColor('blue')">BLUE</button>
+<button [class.button-css]="applyButtonCss" (click)="changeColor('green')">GREEN</button>
 <br/>
 <div [style.background]="color" [style.width]="displayWidth">&nbsp;From Child</div>

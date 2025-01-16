@@ -26,6 +26,9 @@ import { ChildCComponent } from './topics/two-way-binding/child-c/child-c.compon
 import { TemplateVariableComponent } from './topics/template-variable/template-variable.component';
 import { GreetingPipePipe } from './topics/pipe/greeting-pipe.pipe';
 import { EventBindingChildComponent } from './topics/event-binding-child/event-binding-child.component';
+import { DirectivesComponent } from './topics/directives/directives.component';
+import { AttributeDirectiveComponent } from './topics/attribute-directive/attribute-directive.component';
+import { StructuralDirectiveComponent } from './topics/structural-directive/structural-directive.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +55,10 @@ import { EventBindingChildComponent } from './topics/event-binding-child/event-b
     ParentCComponent,
     ChildCComponent,
     TemplateVariableComponent,
-    EventBindingChildComponent
+    EventBindingChildComponent,
+    DirectivesComponent,
+    AttributeDirectiveComponent,
+    StructuralDirectiveComponent
   ],
   imports: [
     BrowserModule,

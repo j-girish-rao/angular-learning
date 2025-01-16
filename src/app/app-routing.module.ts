@@ -14,6 +14,9 @@ import { PropertyBindingComponent } from './topics/property-binding/property-bin
 import { EventBindingComponent } from './topics/event-binding/event-binding.component';
 import { ParentCComponent } from './topics/two-way-binding/parent-c/parent-c.component';
 import { TemplateVariableComponent } from './topics/template-variable/template-variable.component';
+import { DirectivesComponent } from './topics/directives/directives.component';
+import { AttributeDirectiveComponent } from './topics/attribute-directive/attribute-directive.component';
+import { StructuralDirectiveComponent } from './topics/structural-directive/structural-directive.component';
 
 const routes: Routes = [
   { path: '', component: GettingStartedComponent },
@@ -30,6 +33,9 @@ const routes: Routes = [
   { path: 'event-binding', component: EventBindingComponent},
   { path: 'two-way-binding', component: ParentCComponent},
   { path: 'template-var', component: TemplateVariableComponent},
+  { path: 'directives', component: DirectivesComponent},
+  { path: 'attribute-directive', component: AttributeDirectiveComponent},
+  { path: 'struct-directive', component: StructuralDirectiveComponent},
   { path: 'test', component: TestParentComponent }
 ];
 

@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HighlightDirective } from './topics/directives/highlight.directive'; 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -58,11 +60,13 @@ import { StructuralDirectiveComponent } from './topics/structural-directive/stru
     EventBindingChildComponent,
     DirectivesComponent,
     AttributeDirectiveComponent,
+    HighlightDirective,
     StructuralDirectiveComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

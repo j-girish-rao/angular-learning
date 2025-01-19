@@ -36,7 +36,8 @@ const routes: Routes = [
   { path: 'directives', component: DirectivesComponent},
   { path: 'attribute-directive', component: AttributeDirectiveComponent},
   { path: 'struct-directive', component: StructuralDirectiveComponent},
-  { path: 'test', component: TestParentComponent }
+  { path: 'test', component: TestParentComponent },
+  { path: '**', component: GettingStartedComponent },
 ];
 
 @NgModule({

@@ -2,5 +2,40 @@
     <label class="heading-topics">Structural Directive</label>
 </div>
 <div>
+    Are responsible for html layout. They shape or reshape the DOM structure by adding, removing and manipulating the host elements.
+    <div class="sub-heading-topics-2">1. Built-in structural directives</div>
+
+    <br/><b>1. NgIf : </b>
+    Conditionaly created or disposes the sub-elements from the template.
+    When its NgIf is false angular removes an element and its descendants from the DOM. 
+    Angular then disposes of their components which frees up memory and resources.
+    <br/> Syntex : {{ngIfSyntex}}
+    <br/> Example : {{isShowText}} => <span [ngStyle]="applyCurrentStyle" *ngIf="isShowText">Show span data.</span> // As isShowText is true the span is visible. Adds DOM element to parent DOM.
+    <br/> Example : {{isHideText}} => <span [ngStyle]="applyCurrentStyle" *ngIf="isHideText">Hide span data.</span> // Nothing is visible because isHideText is false so this DOM element is not included.
+    <br/>
     
+    <br/><b>2. NgFor : </b> Repeat a node for each item in a list. 
+    <br/> Syntex : {{ngForSyntex}}
+    <br/> Example : <span [ngStyle]="applyCurrentStyle" *ngFor="let student of students">{{student.name}} </span>
+    <br/> Syntex : {{ngOtherForSyntex}}
+    <br/> Example : <span [ngStyle]="applyCurrentStyle" *ngFor="let student of students; let i = index">{{i+1}}.{{student.name}} </span>
+    <br/>
+
+    <br/><b>3. NgSwitch : </b> A set of directive that switch among alternative views. Angular puts only the selected element into the DOM. 
+    ngSwitch is a set of three directives ngSwitch(an attrivute directive that changes the behaviour of its companion directive), 
+    ngSwitchCase (structural directive that adds its element to DOM when its bound value is equal to switch value and removed its bound value when it doesnt equal the switch value) 
+    and ngSwitchDefault (that adds its element to the DOM when there is no selected switch case).
+    <br/>Syntex : <pre>{{ngSwitchSyntex}}</pre>
+    Example : {{defineType | json}}
+    <div *ngFor="let f of defineType">
+        <div [ngSwitch]="f.name">
+            <span [highlightText]="'orange'" *ngSwitchCase="'Apple'">I'm {{f.name}} and i'm fruit.</span>
+            <span [highlightText]="'orange'" *ngSwitchCase="'Orange'">I'm {{f.name}} and i'm Fruit</span>
+            <span [highlightText]="'green'" *ngSwitchCase="'Potato'">I'm {{f.name}} and i'm Vegetable</span>
+            <span [highlightText]="'green'" *ngSwitchCase="'Onion'">I'm {{f.name}} and i'm Vegetable</span>
+            <span *ngSwitchDefault>I'm {{f.name}} and i'm tomato.</span>
+        </div>
+    </div>
+    <br/>
+
 </div>

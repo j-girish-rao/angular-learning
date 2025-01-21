@@ -17,6 +17,10 @@ import { TemplateVariableComponent } from './topics/template-variable/template-v
 import { DirectivesComponent } from './topics/directives/directives.component';
 import { AttributeDirectiveComponent } from './topics/attribute-directive/attribute-directive.component';
 import { StructuralDirectiveComponent } from './topics/structural-directive/structural-directive.component';
+import { DependencyInjectionComponent } from './topics/dependency-injection/dependency-injection.component';
+import { AngularRoutingComponent } from './topics/angular-routing/angular-routing.component';
+import { TemplateFormComponent } from './topics/template-form/template-form.component';
+import { ReactiveFormComponent } from './topics/reactive-form/reactive-form.component';
 
 const routes: Routes = [
   { path: '', component: GettingStartedComponent },
@@ -36,6 +40,10 @@ const routes: Routes = [
   { path: 'directives', component: DirectivesComponent},
   { path: 'attribute-directive', component: AttributeDirectiveComponent},
   { path: 'struct-directive', component: StructuralDirectiveComponent},
+  { path: 'dependency-injection', component: DependencyInjectionComponent},
+  { path: 'angular-routing', component: AngularRoutingComponent},
+  { path: 'template-form', component: TemplateFormComponent},
+  { path: 'reactive-form', component: ReactiveFormComponent},
   { path: 'test', component: TestParentComponent },
   { path: '**', component: GettingStartedComponent },
 ];

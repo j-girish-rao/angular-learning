@@ -24,8 +24,8 @@ export class StructuralDirectiveComponent implements OnInit {
 
   ngSwitchSyntex : string = 
   `<div [ngSwitch]="item.Fruits">
-    <div *ngSwitchCase="'XX'">XX</div>
-    <div *ngSwitchCase="'YY'">YY</div>
+    <div *ngSwitchCase="'AA'">AA</div>
+    <div *ngSwitchCase="'BB'">BB</div>
     <div *ngSwitchDefault>Default</div>
   </div>`;
 

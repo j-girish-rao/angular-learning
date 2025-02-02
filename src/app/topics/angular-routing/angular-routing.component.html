@@ -2,5 +2,80 @@
     <label class="heading-topics">Angular Routing</label>
 </div>
 <div>
-    <div class="sub-heading-topics-2">Angular Routing</div>
+    <div>
+        <div class="sub-heading-topics-2">Angular routing</div>
+        <div>
+            <p>
+                Its core part of angular. It enables to build SPA with multiple views and allow nagivation between
+                these views.
+            </p>
+            <p>
+                You need to have base href="/" in head on index.html file which assumes that the app folder 
+                is the application root and that uses /.
+            </p>
+            <p>
+                app-routing.module.ts is the file where we provide routing for the application. 
+                It needs router module to perform the routing/navigating between the pages. The routes is 
+                of type Routes where all the routes are defined and this is set in NgModule where the Routes
+                are set which means imported and exported where this can be imported in app.module.
+            </p>
+            <p>
+                Routes is a colletion of json objects, where json has two properties path(defines URL 
+                path for the route) and component which is the corresponding component for the particular 
+                route.
+            </p>
+            <p>
+                These routes cans be accessd or redirected from html using routerLink attribure.
+                <br/>Example : {{Example1}}
+            </p>
+            <p>
+                {{Example2}} : This element updates the angular to update the application view with the component for the selected route.
+                <br/>
+                <span class="applyBold">
+                    NOTE : Order of routes is important because router uses first match wins strategy.
+                </span>
+            </p>
+        </div>
+        <div class="sub-heading-topics-2">Passing data between routes</div>
+        <div>
+            <p>
+                If you wanna pass data from one component to another you use activated router interface.
+                <button routerLink="/router-data/{{inputText}}">Redirect</button>
+            </p>
+            <p>
+                Wild card route is a route when no route path matches its the last place where its gonna hit.
+                <br/> Syntex : path:"**" and define component. In our application we are redirecting to root component.        
+            </p>
+        </div>
+        <div class="sub-heading-topics-2">Child routes</div>
+        <div>
+            <p>
+                Nested routes or child routes where we wanna expand the routes to parent routes.
+                Here parent route is /angular-routing suppose we wanna add child route to this then it becomes :
+                <br/>a. /angular-routing/do_something_here_1
+                <br/>b. /angular-routing/do_something_here_2
+                <br/>We can also pass data to child routes which uses same way as activated routed as mentioned above.
+                <br/>
+                <button routerLink="ar-child-route-a">Child Route A</button>
+                <button routerLink="ar-child-route-b">Child Route B</button>
+                <router-outlet></router-outlet>
+                <br/>
+                Here if you see the url path its updated with child route.
+            </p>
+        </div>
+        <div class="sub-heading-topics-2">Guards</div>
+        <div>
+            Use route guard from restricting users from navigating to parts of the application without authorization. The following route guards are available in angular :
+            <ol>
+                <li>CanActivate</li>
+                <li>CanActivateChild</li>
+                <li>canDeactivate</li>
+                <li>Resolved</li>
+                <li>CanLoad</li>
+            </ol>
+            A service guard is created which performs the authorization before uses is redirected to these views.
+            <button routerLink="ar-child-route-a">Child Route A</button>
+            <button routerLink="ar-child-route-b">Child Route B</button>
+        </div>
+    </div> 
 </div>

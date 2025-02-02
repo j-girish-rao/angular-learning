@@ -38,6 +38,9 @@ import { ReactiveFormComponent } from './topics/reactive-form/reactive-form.comp
 import { FormValidationComponent } from './topics/form-validation/form-validation.component';
 
 import { LogService } from './topics/dependency-injection/log.service';
+import { RouterDataComponent } from './topics/angular-routing/router-data/router-data.component';
+import { ArChildRouteAComponent } from './topics/angular-routing/ar-child-route-a/ar-child-route-a.component';
+import { ArChildRouteBComponent } from './topics/angular-routing/ar-child-route-b/ar-child-route-b.component';
 
 @NgModule({
   declarations: [
@@ -73,7 +76,10 @@ import { LogService } from './topics/dependency-injection/log.service';
     AngularRoutingComponent,
     TemplateFormComponent,
     ReactiveFormComponent,
-    FormValidationComponent
+    FormValidationComponent,
+    RouterDataComponent,
+    ArChildRouteAComponent,
+    ArChildRouteBComponent
   ],
   imports: [
     BrowserModule,

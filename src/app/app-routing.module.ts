@@ -21,6 +21,10 @@ import { DependencyInjectionComponent } from './topics/dependency-injection/depe
 import { AngularRoutingComponent } from './topics/angular-routing/angular-routing.component';
 import { TemplateFormComponent } from './topics/template-form/template-form.component';
 import { ReactiveFormComponent } from './topics/reactive-form/reactive-form.component';
+import { RouterDataComponent } from './topics/angular-routing/router-data/router-data.component';
+import { ArChildRouteAComponent } from './topics/angular-routing/ar-child-route-a/ar-child-route-a.component';
+import { ArChildRouteBComponent } from './topics/angular-routing/ar-child-route-b/ar-child-route-b.component';
+import { SampleGuardGuard } from './topics/angular-routing/sample-guard.guard';
 
 const routes: Routes = [
   { path: '', component: GettingStartedComponent },
@@ -41,7 +45,13 @@ const routes: Routes = [
   { path: 'attribute-directive', component: AttributeDirectiveComponent},
   { path: 'struct-directive', component: StructuralDirectiveComponent},
   { path: 'dependency-injection', component: DependencyInjectionComponent},
-  { path: 'angular-routing', component: AngularRoutingComponent},
+  { path: 'angular-routing', component: AngularRoutingComponent,
+    children : [ 
+      { path : 'ar-child-route-a', component: ArChildRouteAComponent, canActivate: [SampleGuardGuard]} ,
+      { path : 'ar-child-route-b', component: ArChildRouteBComponent, canActivate: [SampleGuardGuard]} ,
+    ]
+  },
+  { path: 'router-data/:data', component: RouterDataComponent},
   { path: 'template-form', component: TemplateFormComponent},
   { path: 'reactive-form', component: ReactiveFormComponent},
   { path: 'test', component: TestParentComponent },

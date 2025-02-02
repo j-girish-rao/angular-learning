@@ -37,6 +37,8 @@ import { TemplateFormComponent } from './topics/template-form/template-form.comp
 import { ReactiveFormComponent } from './topics/reactive-form/reactive-form.component';
 import { FormValidationComponent } from './topics/form-validation/form-validation.component';
 
+import { LogService } from './topics/dependency-injection/log.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -78,7 +80,7 @@ import { FormValidationComponent } from './topics/form-validation/form-validatio
     AppRoutingModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [LogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,29 @@
+.btn{
+    width: fit-content;
+    height:35px;
+    color: white;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace
+}
+
+.btn-message{
+    background: orange;
+}
+
+.btn-message{
+    background: orange;
+}
+
+.btn-message:hover {
+    border: 2px solid red;
+}
+
+.btn-error {
+    background: red;
+}
+
+.btn-error:hover{
+    border: 2px solid orange;
+}

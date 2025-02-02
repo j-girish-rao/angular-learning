@@ -2,5 +2,31 @@
     <label class="heading-topics">Dependency Injection</label>
 </div>
 <div>
-    <div class="sub-heading-topics-2">Dependency Injection</div>
+    Depedencies are service or objects that a class needs to perfom its function. Depedency Injection(DI) is a design pattern in which a class
+    requests depedencies from external sources rather than creating them. Its like adding a new functionality/extension ti the application.
 </div>
+<div>
+    <br/>
+    <div>How to implement injectable service.</div>
+    <ol type="a">
+        <li>Create a service file : log.service.ts</li>
+        <li>Import Injectable from angular.core.</li>
+        <li>Implement Injectable decorator with providedIn as root as we are gonna inject this service at root.</li>
+        <li>Export a class and add implementation.</li>
+        <li>In app.module inject this service class in providers. Where its visible in component.</li>
+        <li>In app component declare the object of this class.</li>
+    </ol>
+</div>
+<div>
+    <div><b>Example : </b>Check console log after you click these buttons.</div>
+    <button class="btn btn-message" (click)="logCustomMessage()">Log message</button>
+    <button class="btn btn-error" (click)="logErrorMessage()">Log error</button>
+    <br/>
+    Here there is another example where we also have imported renderer and Element reference and injected it into constructor.
+    As you can see the font color is gree this is becauses of renderer which is injected in constructor and used in ngOnInit().
+</div>
+
+
+<!-- <div>
+    <div class="sub-heading-topics-2">Dependency Injection</div>
+</div> -->

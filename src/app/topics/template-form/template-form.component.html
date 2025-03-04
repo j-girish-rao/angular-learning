@@ -2,6 +2,33 @@
     <label class="heading-topics">Template Forms</label>
 </div>
 <div>
-    <div class="sub-heading-topics-2">Template Forms</div>
+    Angular supports two design approaches for interactive forms :
+    <div class="sub-heading-topics-2">a. Template Forms</div>
+    <div class="sub-heading-topics-2">b. Reactive Forms</div>
 </div>
-
+Are suitable for simple forms, while reactive forms are more scalable suitable for complex forms.
+<br/>
+<div class="sub-heading-topics-2">a. Template Forms</div>
+Getting started with template forms.
+<form>
+    <div>
+        <label for="name">Name</label> : 
+        <input type="text" id="name" required [(ngModel)]="mod.name" name="mame"/>
+    </div>
+    <div>
+        <label for="address">Address</label> : 
+        <input type="text" id="address" [(ngModel)]="mod.address" name="address"/>
+    </div>
+    <div>
+        <label for="age">Age</label> : 
+        <select id="age" required [(ngModel)]="mod.age" name="age">
+            <option *ngFor="let a of availableAges">{{a}}</option>
+        </select>
+    </div>
+    <div>
+        <label for="gender">Gender</label> : 
+        <select id="gender" required [(ngModel)]="mod.gender" name="gender">
+            <option *ngFor="let g of availableGender">{{g}}</option>
+        </select>
+    </div>
+</form>

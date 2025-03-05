@@ -1,4 +1,4 @@
-export class Employee {
+class Employee {
     constructor(
         public id:number,
         public name: string,
@@ -9,3 +9,5 @@ export class Employee {
 
     }
 }
+
+export { Employee };

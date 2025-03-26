@@ -20,9 +20,8 @@
     In here we send data from parent to child using input decorator. Input decorator takes the value from parent and stores the value in child property. 
     Following is an example of input decorator.
     <br/>
-    <app-child-cc [childMessage]="'Hi from Parent!'" [parentStringMessage]="'Another message from Parent component.'"></app-child-cc>
+    <app-child-cc [childMessage]="'Message 1 : From Parent!'" [parentStringMessage]="'Message 2 : From Parent component.'"></app-child-cc>
 </div>
-<div></div> 
 <br/>
 
 <div><label class="sub-heading-topics-2">a2. {{topic2}}</label></div>
@@ -40,15 +39,15 @@
 <div>Following is an example</div>
 <div>
     <app-child-viewchild></app-child-viewchild>
-    <button (click)="getMessageFromChild()">Click : Get message from child.</button> &nbsp;
-    <button (click)="addNumberFromChild()">Click : To add two numbers.</button>
+    <button class="btn-default" (click)="getMessageFromChild()">Click : Get message from child.</button> &nbsp;
+    <button class="btn-default" (click)="addNumberFromChild()">Click : To add two numbers.</button>
 </div>
 <br/>
 
 <div><label class="sub-heading-topics-2">c. {{topic4}}</label></div>
-<div> Will learn later in this course.</div>
+<div> Todo :: Will learn later in this course.</div>
 <br/>
 
 <div><label class="sub-heading-topics-2">c. {{topic5}}</label></div>
-<div> Will learn later in this course.</div>
+<div> Todo :: Will learn later in this course.</div>
 <br/>

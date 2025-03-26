@@ -1,12 +1,17 @@
-<div>
-    Send string message to parent : <button (click)="sendStringMessage()">Click : Send name</button> 
+<style>
+    .highlight {
+        background-color: blueviolet;
+    }
+</style>
+<div class="highlight">
+    Send string message to parent : <button class="btn-default" (click)="sendStringMessage()">Click : Send name</button> 
 </div>
-<div>
-    Send number message to parent : <button (click)="sendNumberMessage()">Click : Send location</button>
+<div class="highlight">
+    Send number message to parent : <button class="btn-default" (click)="sendNumberMessage()">Click : Send location</button>
 </div>
-<div>
-    Send person details to parent : <button (click)="sendPersonDetails()">Click : Send details</button>
+<div class="highlight">
+    Send person details to parent : <button class="btn-default" (click)="sendPersonDetails()">Click : Send details</button>
 </div>
-<div>
+<div class="highlight">
     Description : {{descriptionChild}} 
 </div>

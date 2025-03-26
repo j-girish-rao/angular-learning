@@ -15,6 +15,6 @@ export class ChildViewchildComponent implements OnInit {
   }
 
   addNumbers(a : number, b:number) : number {
-    return (a+b);
+    return a + b;
   }
 }

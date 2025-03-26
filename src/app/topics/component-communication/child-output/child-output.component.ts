@@ -31,7 +31,7 @@ export class ChildOutputComponent implements OnInit {
   }
 
   sendPersonDetails() {
-    var details = new Person('J','Girish','Rao', 'Y1993','Hospet - Karnataka');
+    var details = new Person('Girish J', 'Y1993','India');
     this.sendPerson.emit(details);
   }
 

@@ -1,9 +1,14 @@
-<div>{{labelMessage}}</div>
+<style>
+.highlight {
+    background-color: darkblue;
+}
+</style>
+<div class="highlight">{{labelMessage}}</div>
 
-<div>{{childMessage}} // "Hi from Parent!" this message is passed from parent component. </div>
-<div>{{parentStringMessage}} // This is another message which is passed on from parent component to child component.</div>
+<div class="highlight">{{childMessage}} // "Message 1 : From Parent!" this message is passed from parent component. </div>
+<div class="highlight">{{parentStringMessage}} // Message 2 : From Parent component. This is another message which is passed on from parent component to child component.</div>
 
-<div>
+<div class="highlight">
     Multiple parameters can be passed from parent to child component.
     {{inputDescription}}
 </div>

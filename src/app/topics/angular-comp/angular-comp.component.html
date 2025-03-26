@@ -16,8 +16,30 @@
     {{componentDecorator}}
 </div>
 <pre>
-    selector     : This is the css selector for this component.
-    templateUrl : This holds the html template URL for this component.
-    styleUrls    : This has the definition of all the styles for this component.
+    selector     :: This is the css selector for this component.
+    templateUrl  :: This holds the html template URL for this component.
+    styleUrls    :: This has the definition of all the styles for this component.
 </pre>
 <div>To use this component this component must be included in app module decleration. And component selector should be used in html as a tag. The tag name should be same as the component selector name.</div>
+<br/>
+<div>
+    <label class="heading-topics">Angular module</label>
+</div>
+<div>
+    This implements NgModule which has 5 important sections :
+    <pre>
+        1. declarations : The declarations property of the NgModule metadata declares the components, directives, 
+            and pipes that belong to the NgModule.
+        2. imports : Components declared in an NgModule may depend on other components, directives, and pipes. 
+            Add these dependencies to the imports property of the NgModule metadata.
+        3. exports : An NgModule can export its declared components, directives, and pipes such that they're 
+            available to other components and NgModules.
+        4. providers : An NgModule can specify providers for injected dependencies. These providers are 
+            available to:
+            * Any standalone component, directive, or pipe that imports the NgModule, and
+            * The declarations and providers of any other NgModule that imports the NgModule.
+        5. bootstrap : You can use the bootstrapModule method from either platformBrowser or platformServer 
+            to start an Angular application. When run, this function locates any elements on the page with 
+            a CSS selector that matches the listed componet(s) and renders those components on the page.
+    </pre>
+</div>

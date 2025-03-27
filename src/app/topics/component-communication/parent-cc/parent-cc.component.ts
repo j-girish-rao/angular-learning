@@ -12,7 +12,7 @@ export class ParentCcComponent implements AfterViewInit {
     outputBindingDescription : string = 'In this use case we will be sending data from child to parent component. Here in this case we would be using @Output() decorator.';
 
     readonly binding : string = 'Binding (@Input and @Output)';
-    readonly  reference : string = 'Reference (@ViewChild and @ContentChild)';
+    readonly reference : string = 'Reference (@ViewChild and @ContentChild)';
     readonly provider : string = 'Provider (Service)';
     readonly templateOutlet : string = 'Template Outlet';
 

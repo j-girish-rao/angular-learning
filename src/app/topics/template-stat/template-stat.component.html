@@ -1,15 +1,48 @@
+<style>
+    .apply-temp-styleing {
+        background-color: red; 
+        width: fit-content;
+        margin:5px;
+        padding:3px;
+    }
+    .parent-div {
+        width: fit-content;
+    }
+    .child-left-align {
+        float:left;
+        width: fit-content;
+    }
+    .child-right-align {
+        float:right;
+        width: fit-content;
+    }
+</style>
+
 <div>
     <label class="heading-topics">Template Statatement</label>
 </div>
 
-
 <div>
     Template statement is something that is response to an event raised by a target like element or component or directive.
 </div>
-<div>
-    <button (click)="toggleContent($event)">Toggle Content</button> 
-    <div style="background-color: red; width: 30px;margin:5px;padding:3px;"> {{showDiv}} </div>
+<div class="parent-div">
+    <div class="child-left-align">
+        <button class="btn-default" (click)="toggleContent($event)">Click to Toggle</button> 
+    </div>
+    <div class="child-right-align">
+        <div class="apply-temp-styleing"> {{showDiv}} </div>
+    </div>
 </div>
+<br/>
+<div class="parent-div">
+    <div class="child-left-align">
+        <button class="btn-default" (mouseover)="toggleMouseOver($event)" (mouseleave)="toggleMouseLeave($event)">Hover to Toggle</button> 
+    </div>
+    <div class="child-right-align">
+        <div class="apply-temp-styleing"> {{hoverData}} </div>
+    </div>
+</div>
+<br/>
 <div>
     Here in above example on click of button an event is trigerred which toggles the message. Click is one such event which is trigerred.
 </div>

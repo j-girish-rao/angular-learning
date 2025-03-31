@@ -10,11 +10,11 @@ export class AttributeDirectiveComponent implements OnInit {
 
   constructor() { }
 
-  ngClassSyntex : string = `<div [ngClass] = "applyIsSpecialClass ? 'specialClass' : '' "></div>`;
+  ngClassSyntax : string = `<div [ngClass] = "applyIsSpecialClass ? 'specialClass' : '' "></div>`;
   applyIsSpecialClass : boolean = true;
 
-  ngStyleSyntex : string = `<div [ngStyle] = "styleThisDiv" ></div>. Where is an json object styleThisDiv { 'color' : 'red', 'font-size' : '14px' }`;
-  ngModelSyntex : string = `<input type="textbox" id="txtName" [(ngModel)]="fullName" />`;
+  ngStyleSyntax : string = `<div [ngStyle] = "styleThisDiv" ></div>. Where is an json object styleThisDiv { 'color' : 'red', 'font-size' : '14px' }`;
+  ngModelSyntax : string = `<input type="textbox" id="txtName" [(ngModel)]="fullName" />`;
 
   applyCssClasses = {};
   applyCurrentStyle = {};

@@ -3,7 +3,9 @@
 </div>
 
 <div>
-    Pipes are functions that accepts a input value and return a formatted value.
+    Pipes are functions that accepts a input value and return a formatted value. Pipe has to  implement Pipe decorator. Where it has to implement transform method.
+    This is where the changes to input are applied.
+    <br/> Syntax : {{pipeSyntax}}
 </div>
 <pre>
     For example : 
@@ -32,7 +34,7 @@
     <div>Date after pipe format : {{beforeFormatDate | date : 'long'}}   // Date format  | date : 'long'</div>
 </div>
 <br/>
-<div>God's name : {{count_God | greetingPipe}}</div>
+<div>Greet user {{userName}} : {{userName | greetingPipe}}</div>
 <br/>
 <div>
     Pipes are executed only after it detects pure change to the input value.

@@ -11,10 +11,10 @@ export class ParentCComponent implements OnInit {
 
   fontSize : number = 16;
   backgroundColor : string = 'red';
-  bindingSyntex1 : string = '<app-child [color]=backgroundColor" (colorChange)="backgroundColor"></app-child>';
-  bindingSyntex2 : string = '<app-child [(color)]="backgroundColor"></app-child>';
+  bindingSyntax1 : string = '<app-child [color]=backgroundColor" (colorChange)="backgroundColor"></app-child>';
+  bindingSyntax2 : string = '<app-child [(color)]="backgroundColor"></app-child>';
   displayWidthParent : string = '290px';
-  syatexExample : string = "<ap-child-comp [(shareData)]='receivedData'></ap-child-comp>.";
+  syntaxExample : string = "<ap-child-comp [(shareData)]='receivedData'></ap-child-comp>.";
 
   ngOnInit(): void {
   }

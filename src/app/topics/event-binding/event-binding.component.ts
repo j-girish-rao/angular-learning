@@ -14,10 +14,10 @@ export class EventBindingComponent implements OnInit {
 
   constructor() { }
 
-  eventBindSyntex = '<button (targetEvent)="templateStatement"></button>';
+  eventBindSyntax = '<button (targetEvent)="templateStatement"></button>';
   alertBtnClass = 'class-a class-b';
   pointerOverEventData = 'Start';
-  customEventEmitterSyntex : string = '<app-event-binding-child (deleteEmitter)="catchDeleteChildItem($event)"></app-event-binding-child>';
+  customEventEmitterSyntax : string = '<app-event-binding-child (deleteEmitter)="catchDeleteChildItem($event)"></app-event-binding-child>';
 
   ngOnInit(): void {
   }

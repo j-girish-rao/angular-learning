@@ -4,8 +4,8 @@
 <div>
     Two way binding is the concept of sharing and giving. Two way binding gives application a way to share data, use two Way
     binding to listen to events and update values simultaniously between parent and child components.
-    Syntex : Combination of [] and (). 
-    <br/><b>For instance {{syatexExample}}</b>
+    Syntax : Combination of [] and (). 
+    <br/><b>For instance {{syntaxExample}}</b>
     <br/> "shareData" is a property in child component and "receivedData" is a property in parent component.
     <br/><br/>
     <b>NOTE : Two way binding is short hand of property binding and event binding.</b>
@@ -23,8 +23,8 @@
 <div>
     <label>Change font size : </label>
     <label>{{fontSize}}</label>&nbsp;
-    <button (click)="inc()">+</button>
-    <button (click)="dec()">-</button>
+    <button class="btn-default" (click)="inc()">&nbsp;+&nbsp;</button>
+    <button class="btn-default" (click)="dec()">&nbsp;-&nbsp;</button>
     <div [style.font-size.px]="fontSize">Hi this is Girish.</div>
 </div>
 <br/>
@@ -38,8 +38,8 @@
     <div>
         In this example the change in color is both property binding and event binding.
         <br/>
-        {{bindingSyntex1}} | This is resolved to following.
+        {{bindingSyntax1}} | This is resolved to following.
         <br/>
-        {{bindingSyntex2}}
+        {{bindingSyntax2}}
     </div>
 </div>

@@ -10,19 +10,19 @@ export class StructuralDirectiveComponent implements OnInit {
   constructor() { }
   applyCurrentStyle = {};
 
-  ngIfSyntex : string = '<div *ngIf="isActive"></div>';
+  ngIfSyntax : string = '<div *ngIf="isActive"></div>';
   isShowText : boolean = true;
   isHideText : boolean = false;
 
-  ngForSyntex : string = '<div *ngFor="let item of items">{{item}}</div>';
-  ngOtherForSyntex : string = '<div *ngFor="let item of items; let i = index">{{i}}.{{item}}</div> //index is the keyword here.';
+  ngForSyntax : string = '<div *ngFor="let item of items">{{item}}</div>';
+  ngOtherForSyntax : string = '<div *ngFor="let item of items; let i = index">{{i}}.{{item}}</div> //index is the keyword here.';
   students = [
     {name : 'Ram'},
     {name : 'Krishna'},
     {name : 'Karan'}
   ]
 
-  ngSwitchSyntex : string = 
+  ngSwitchSyntax : string = 
   `<div [ngSwitch]="item.Fruits">
     <div *ngSwitchCase="'AA'">AA</div>
     <div *ngSwitchCase="'BB'">BB</div>

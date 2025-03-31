@@ -9,5 +9,5 @@ export class WeightPipePipe implements PipeTransform {
     value = Math.round((value + Number.EPSILON) * 100) / 100
     return `${value} Kilos`;
   }
-
+  
 }

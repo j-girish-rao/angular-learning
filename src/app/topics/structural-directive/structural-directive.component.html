@@ -9,15 +9,15 @@
     Conditionaly created or disposes the sub-elements from the template.
     When its NgIf is false angular removes an element and its descendants from the DOM. 
     Angular then disposes of their components which frees up memory and resources.
-    <br/> Syntex : {{ngIfSyntex}}
+    <br/> Syntax : {{ngIfSyntax}}
     <br/> Example : {{isShowText}} => <span [ngStyle]="applyCurrentStyle" *ngIf="isShowText">Show span data.</span> // As isShowText is true the span is visible. Adds DOM element to parent DOM.
     <br/> Example : {{isHideText}} => <span [ngStyle]="applyCurrentStyle" *ngIf="isHideText">Hide span data.</span> // Nothing is visible because isHideText is false so this DOM element is not included.
     <br/>
     
     <br/><b>2. NgFor : </b> Repeat a node for each item in a list. 
-    <br/> Syntex : {{ngForSyntex}}
+    <br/> Syntax : {{ngForSyntax}}
     <br/> Example : <span [ngStyle]="applyCurrentStyle" *ngFor="let student of students">{{student.name}} </span>
-    <br/> Syntex : {{ngOtherForSyntex}}
+    <br/> Syntax : {{ngOtherForSyntax}}
     <br/> Example : <span [ngStyle]="applyCurrentStyle" *ngFor="let student of students; let i = index">{{i+1}}.{{student.name}} </span>
     <br/>
 
@@ -25,7 +25,7 @@
     ngSwitch is a set of three directives ngSwitch(an attrivute directive that changes the behaviour of its companion directive), 
     ngSwitchCase (structural directive that adds its element to DOM when its bound value is equal to switch value and removed its bound value when it doesnt equal the switch value) 
     and ngSwitchDefault (that adds its element to the DOM when there is no selected switch case).
-    <br/>Syntex : <pre>{{ngSwitchSyntex}}</pre>
+    <br/>Syntax : <pre>{{ngSwitchSyntax}}</pre>
     Example : {{defineType | json}}
     <div *ngFor="let f of defineType">
         <div [ngSwitch]="f.name">

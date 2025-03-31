@@ -8,19 +8,17 @@
 </div><br/>
 
 Helps in listen for and respond to user actions. Key stroke, mouse movements, touch and movements.<br/>
-Following is an syntex : <br/>
-{{eventBindSyntex}} <br/>
+Following is an syntax : <br/>
+{{eventBindSyntax}} <br/>
 <br/>
 Example 1 : 
-<button (click)="showAlert()">Show Alert</button> // Here click is an event.
+<button class="btn-default" (click)="showAlert()">Show Alert</button> // Here click is an event.
 <br/>
 Example 2 Click-Event : 
-<button (click)="alertMessage($event)" id="btnAlertEvent" [class]="alertBtnClass">Alert Message</button> // Here click is an event.<br/>
+<button class="btn-default" (click)="alertMessage($event)" id="btnAlertEvent" [class]="alertBtnClass">Alert Message</button> // Here click is an event.<br/>
 Example 3 Pointer-Over : 
 <div style="display: flex;">
-    <div style="width:250px; height: 50px;margin: 10px; background-color: darkorange;" id="btnPointerOver" 
-        (pointerover)="pointerOverEvent($event)" 
-        (pointerleave)="pointerLeaveEvent($event)">
+    <div style="width:250px; height: 50px;margin: 10px; background-color: darkorange;" id="btnPointerOver" (pointerover)="pointerOverEvent($event)" (pointerleave)="pointerLeaveEvent($event)">
         <span>Pointer hover Event, give a try.</span>
     </div>
     <div style="background-color: blueviolet; margin: 10px; width:250px; height: 50px;">
@@ -35,7 +33,7 @@ Example 3 Pointer-Over :
 <div>
     Here is the custom event call. Where from child using output data is returned to parent and handled in parent component.
     <br/>
-    Syntex : {{customEventEmitterSyntex}}
+    Syntax : {{customEventEmitterSyntax}}
     <br/>
         Here 'deleteEmitter' is a event emitter in child component which is handled with 'catchDeleteChildItem' in parent component.
     <br/>

@@ -9,6 +9,10 @@ export class PropertyBindingComponent implements OnInit {
 
   constructor() { }
 
+  isForSale : string = 'Click : Is for Sale';
+  isSale : boolean = true;
+  applySaleClass : string = 'onSale';
+  
   isUnchanged = true;
   disabledText = "{{isUnchanged}}";
   AttributeBindingExample1 = '<p [attr.attribute-you-are-targeting]="expression"></p>';
@@ -31,6 +35,18 @@ export class PropertyBindingComponent implements OnInit {
   interpolationExample1 = '<image src={{imageUrl}} />';
 
   ngOnInit(): void {
+  }
+
+  updateProduct(event : any) : void {
+    if(this.isSale) {
+      this.isSale = false;
+      this.isForSale = 'Click : Is not for Sale';
+      this.applySaleClass = 'notOnSale';
+    } else {
+      this.isSale = true;
+      this.isForSale = 'Click : Is for Sale';
+      this.applySaleClass = 'onSale';
+    }
   }
 
 }

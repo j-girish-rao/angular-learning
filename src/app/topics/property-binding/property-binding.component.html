@@ -8,7 +8,16 @@
         background: orange;
         width: 200px;
     }
-
+    .onSale{
+        background-color: green;
+        width: fit-content;
+        padding: 2px;
+    }
+    .notOnSale{
+        background-color: orange;
+        width: fit-content;
+        padding: 2px;
+    }
 </style>
 <div>
     <label class="heading-topics">Property Binding</label>
@@ -49,7 +58,9 @@
 </div>
     Following is an examples of Class binding<br/>
     {{ClassBindingExample1}}
-    <br/><br/><div>Inspect element to view the result of following two class binding examples.</div>
+    <br/>
+    <button class="btn-default" (click)="updateProduct($event)">{{isForSale}}</button><label [class]="applySaleClass">{{isForSale}}</label>
+    <br/><div>Inspect element to view the result of following two class binding examples.</div>
     <div [class.sale]="onSaleTrue">Eg 1 : Is class applied | true</div>
     <div [class.sale]="onSaleFalse">Eg 2 : Is class applied | false</div>
     Eg 3 : {{ClassBindingExample2}} // Here classOne and classTwo are passed as a parameter to class attribute where both the classes gets applied.  <br/> 

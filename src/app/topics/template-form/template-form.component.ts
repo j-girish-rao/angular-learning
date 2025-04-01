@@ -10,16 +10,16 @@ export class TemplateFormComponent implements OnInit {
 
   availableAges = [23,24,25,26,27,28,29,30,31,32,33,34,35,36,37];
   availableGender = ['-Select-','Male','Female'];
-  employee = new Employee(7,'Girish J','Bengaluru, India', 32, 'Male');
-  submited : boolean = false;
+  employee = new Employee(7,'J Girish Rao','Bengaluru, India', 32, 'Male');
+  submitted : boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onSubmit() {
-    this.submited = true;
+  onEmployeeFormSubmit() : void {
+    this.submitted = true;
   }
 
 }

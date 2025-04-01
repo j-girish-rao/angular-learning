@@ -10,47 +10,68 @@
 <br/><br/>
 <div class="sub-heading-topics-2">a. Template Forms</div>
 Getting started with template forms.
-<form>
+<div *ngIf="!submitted">
+    <form #employeeForm="ngForm" (ngSubmit)="onEmployeeFormSubmit()">
+        <table>
+    
+            <tr>
+                <td>
+                    <label for="name">Name</label>
+                </td>
+                <td>
+                    : <input type="text" id="name" required [(ngModel)]="employee.name" name="name"/>
+                </td>
+            </tr>
+    
+            <tr>
+                <td>
+                    <label for="address">Address</label>
+                </td>
+                <td>
+                    : <input type="text" id="address" [(ngModel)]="employee.address" name="address"/>
+                </td>
+            </tr>
+    
+            <tr>
+                <td>
+                    <label for="age">Age</label>
+                </td>
+                <td>
+                    : <select id="age" required [(ngModel)]="employee.age" name="age">
+                        <option *ngFor="let a of availableAges">{{a}}</option>
+                    </select>
+                </td>
+            </tr>
+    
+            <tr>
+                <td>
+                    <label for="gender">Gender</label>
+                </td>
+                <td>
+                    : <select id="gender" required [(ngModel)]="employee.gender" name="gender">
+                        <option *ngFor="let g of availableGender">{{g}}</option>
+                    </select>
+                </td>
+            </tr>
+    
+        </table>
+        <button [disabled]="!employeeForm.form.valid" type="submit" class="btn-default"> Submit </button>
+    </form>
+    <div>To view changes in form values</div>{{employee | json}}
+</div>
+<div *ngIf="submitted">
     <table>
         <tr>
-            <td>
-                <label for="name">Name</label>
-            </td>
-            <td>
-                : <input type="text" id="name" required [(ngModel)]="employee.name" name="mame"/>
-            </td>
+            <td>Name</td><td>: {{employee.name}}</td>
         </tr>
-
         <tr>
-            <td>
-                <label for="address">Address</label>
-            </td>
-            <td>
-                : <input type="text" id="address" [(ngModel)]="employee.address" name="address"/>
-            </td>
+            <td>Address</td><td>: {{employee.address}}</td>
         </tr>
-
         <tr>
-            <td>
-                <label for="age">Age</label>
-            </td>
-            <td>
-                : <select id="age" required [(ngModel)]="employee.age" name="age">
-                    <option *ngFor="let a of availableAges">{{a}}</option>
-                </select>
-            </td>
+            <td>Age</td><td>: {{employee.age}}</td>
         </tr>
-
         <tr>
-            <td>
-                <label for="gender">Gender</label>
-            </td>
-            <td>
-                : <select id="gender" required [(ngModel)]="employee.gender" name="gender">
-                    <option *ngFor="let g of availableGender">{{g}}</option>
-                </select>
-            </td>
+            <td>Gender</td><td>: {{employee.gender}}</td>
         </tr>
     </table>
-    
-</form>
+</div>

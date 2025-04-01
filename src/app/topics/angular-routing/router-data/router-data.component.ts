@@ -8,12 +8,12 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class RouterDataComponent implements OnInit {
 
-  constructor(private _acRoute: ActivatedRoute) { }
+  constructor(private activatedRoute: ActivatedRoute) { }
 
   dataFromComponent : any = '';
 
   ngOnInit(): void {
-    this.dataFromComponent = this._acRoute.snapshot.paramMap.get('data');
+    this.dataFromComponent = this.activatedRoute.snapshot.paramMap.get('data');
   }
 
 }

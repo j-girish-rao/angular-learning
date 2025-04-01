@@ -9,6 +9,7 @@ export class AngularRoutingComponent implements OnInit {
 
   Example1 : string = "<a routerLink='/some_path'>Redirect</a>";
   Example2 : string = "<router-outlet></router-outlet>";
+  fullName : string = '';
 
   inputText : string = 'activated route';
 

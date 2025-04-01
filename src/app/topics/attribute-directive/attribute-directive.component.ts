@@ -38,7 +38,7 @@ export class AttributeDirectiveComponent implements OnInit {
     this.applyCurrentStyle = {
       'background-color': 'crimson',
       'color': 'yellow',
-      'font-size': '15px'
+      'font-size': '17px'
     }
   }
 

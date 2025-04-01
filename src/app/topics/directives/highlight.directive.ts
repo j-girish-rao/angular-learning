@@ -1,9 +1,8 @@
-import { Directive, ElementRef, HostListener,Input } from "@angular/core"; 
+import { Directive, ElementRef, HostListener, Input } from "@angular/core"; 
 
 @Directive({
     selector: '[highlightText]'
 })
-
 export class HighlightDirective {
     
     element : ElementRef<any>;
@@ -11,9 +10,10 @@ export class HighlightDirective {
 
     constructor(ele : ElementRef){
         this.element = ele;
-        this.element.nativeElement.style.fontSize = '15px';
-        this.element.nativeElement.style.color = 'red';
-        this.element.nativeElement.style.fontWeight = '800';
+        this.element.nativeElement.style.fontSize = '17px';
+        this.element.nativeElement.style.color = 'yellow';
+        this.element.nativeElement.style.fontWeight = '600';
+        this.element.nativeElement.style.border = '1px solid blue';
     }
 
     @HostListener('mouseenter') onMouseEnter() {

@@ -3,7 +3,7 @@
 </div>
 <div>
     <div>
-        <div class="sub-heading-topics-2">Angular routing</div>
+        <!-- <div class="sub-heading-topics-2">Angular routing</div> -->
         <div>
             <p>
                 Its core part of angular. It enables to build SPA with multiple views and allow nagivation between
@@ -26,7 +26,7 @@
             </p>
             <p>
                 These routes cans be accessd or redirected from html using routerLink attribure.
-                <br/>Example : {{Example1}}
+                <br/><b>Example : </b> {{Example1}}
             </p>
             <p>
                 {{Example2}} : This element updates the angular to update the application view with the component for the selected route.
@@ -40,7 +40,9 @@
         <div>
             <p>
                 If you wanna pass data from one component to another you use activated router interface.
-                <button routerLink="/router-data/{{inputText}}">Redirect</button>
+                <br/>
+                <label for="fullName">Input name : </label><input type="text" id="fullName" [(ngModel)]="fullName" />&nbsp;
+                <button class="btn-default" routerLink="/router-data/{{fullName}}">Redirect &raquo; </button>
             </p>
             <p>
                 Wild card route is a route when no route path matches its the last place where its gonna hit.
@@ -56,8 +58,8 @@
                 <br/>b. /angular-routing/do_something_here_2
                 <br/>We can also pass data to child routes which uses same way as activated routed as mentioned above.
                 <br/>
-                <button routerLink="ar-child-route-a">Child Route A</button>
-                <button routerLink="ar-child-route-b">Child Route B</button>
+                <button class="btn-default" routerLink="ar-child-route-a">Child Route A</button>
+                <button class="btn-default" routerLink="ar-child-route-b">Child Route B</button>
                 <router-outlet></router-outlet>
                 <br/>
                 Here if you see the url path its updated with child route.
@@ -74,8 +76,8 @@
                 <li>CanLoad</li>
             </ol>
             A service guard is created which performs the authorization before uses is redirected to these views.
-            <button routerLink="ar-child-route-a">Child Route A</button>
-            <button routerLink="ar-child-route-b">Child Route B</button>
+            <button class="btn-default" routerLink="ar-child-route-a">Child Route A</button>
+            <button class="btn-default" routerLink="ar-child-route-b">Child Route B</button>
         </div>
     </div> 
 </div>

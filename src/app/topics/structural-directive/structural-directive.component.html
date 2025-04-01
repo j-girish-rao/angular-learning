@@ -7,11 +7,11 @@
 
     <br/><b>1. NgIf : </b>
     Conditionaly created or disposes the sub-elements from the template.
-    When its NgIf is false angular removes an element and its descendants from the DOM. 
+    When its NgIf is false angular removes an element and its descendants from the DOM.
     Angular then disposes of their components which frees up memory and resources.
     <br/> Syntax : {{ngIfSyntax}}
-    <br/> Example : {{isShowText}} => <span [ngStyle]="applyCurrentStyle" *ngIf="isShowText">Show span data.</span> // As isShowText is true the span is visible. Adds DOM element to parent DOM.
-    <br/> Example : {{isHideText}} => <span [ngStyle]="applyCurrentStyle" *ngIf="isHideText">Hide span data.</span> // Nothing is visible because isHideText is false so this DOM element is not included.
+    <br/> Example : {{isShowText}} &raquo; <span [ngStyle]="applyCurrentStyle" *ngIf="isShowText">Show span data.</span> // As isShowText is true the span is visible. Adds DOM element to parent DOM.
+    <br/> Example : {{isHideText}} &raquo; <span [ngStyle]="applyCurrentStyle" *ngIf="isHideText">Hide span data.</span> // Nothing is visible because isHideText is false so this DOM element is not included.
     <br/>
     
     <br/><b>2. NgFor : </b> Repeat a node for each item in a list. 

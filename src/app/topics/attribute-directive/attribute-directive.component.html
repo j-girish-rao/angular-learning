@@ -6,19 +6,19 @@
     <div>
         <div class="sub-heading-topics-2">1. Built-in directives</div>
         <div>
-            Attribute directive listens to and modify the behaviour of other html elements attributes , properties and components.
+            Attribute directive listens to and modify the behaviour of other html elements attributes, properties and components.
             Many ng modules such as router module and form module define their own attribute directives. 
-            <br/><br/>Few most common atribute directives are as follows :
+            <br/><br/>Few most common attribute directives are as follows :
 
             <br/><b>1. NgClass : Adds and removes a set of/multiple css classes.</b>
             <br/> Syntax : {{ngClassSyntax}} // When applyIsSpecialClass  is true specialClass class is applied.
             <br/> Example 1 : <span [ngClass]="applyIsSpecialClass ? 'isSpecial' : ''">Applied ngClass to content.</span>
-            <br/> Example 2 : <span [ngClass]="applyCssClasses"> Another example of applied ngClass.</span> // Here Json object is applied as classes for css.
+            <br/> Example 2 : <span [ngClass]="applyCssClasses"> Another example of applied ngClass.</span> // Here Json object is applied as classes for css. The classes are defined in attribute-directive.component.scss.
             <br/>Based on true or false state of each class the css is applied to the html element.
 
             <br/><br/><b>2. NgStyle : Adds and removes a set of html styles. Used to set multiple inline styles based on the state of the component.</b>
-            <br/> Syntax : {{ngStyleSyntax}} 
-            <br/> Example 1 : <span [ngStyle]="applyCurrentStyle"> Applied ngStyle to this span element. </span> 
+            <br/> Syntax : {{ngStyleSyntax}}
+            <br/> Example 1 : <span [ngStyle]="applyCurrentStyle"> Applied ngStyle to this span element. </span>
 
             <br/><br/><b>3. NgModel : Adds two way binding to an html form element. This is used to show and update the property simultaniously.</b>
             <br/> To use this FormsModule is required to be imported as this is the out of box feature of FormsModule.
@@ -35,9 +35,10 @@
             For custom directive, we need to create a file ending with directive.ts. And here we need to import core directive from core component.
             Implement the Directive in this with an appropriate selector. We can also add more functionality to directive by adding mouse events and applying them to the html element.
             <br/>Syntax : file_name.directive.ts
-            <br/><span highlightText> This is custome directive.</span>
-            <br/><span [highlightText]="'blue'"> This is custome directive.</span>
-            
+            <br/><span highlightText> This is custome directive.</span> // Here its applied with highlightText in tag.
+            <br/><span [highlightText]="'blue'"> This is custome directive.</span> // Here its applied with [highlightText]="someValue" in tag. This also has mouse over functionality.
+            <br/>
         </div>
+        <br/>
     </div>
 </div>

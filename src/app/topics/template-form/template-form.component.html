@@ -11,7 +11,7 @@
 <div class="sub-heading-topics-2">a. Template Forms</div>
 Getting started with template forms.
 <div *ngIf="!submitted">
-    <form #employeeForm="ngForm" (ngSubmit)="onEmployeeFormSubmit()">
+    <form (ngSubmit)="onEmployeeFormSubmit()">
         <table>
     
             <tr>
@@ -28,7 +28,7 @@ Getting started with template forms.
                     <label for="address">Address</label>
                 </td>
                 <td>
-                    : <input type="text" id="address" [(ngModel)]="employee.address" name="address"/>
+                    : <textarea rows="3" cols="50" type="text" id="address" [(ngModel)]="employee.address" name="address"></textarea>
                 </td>
             </tr>
     
@@ -55,7 +55,7 @@ Getting started with template forms.
             </tr>
     
         </table>
-        <button [disabled]="!employeeForm.form.valid" type="submit" class="btn-default"> Submit </button>
+        <button type="submit" class="btn-default"> Submit </button>
     </form>
     <div>To view changes in form values</div>{{employee | json}}
 </div>
@@ -74,4 +74,75 @@ Getting started with template forms.
             <td>Gender</td><td>: {{employee.gender}}</td>
         </tr>
     </table>
+    <button class="btn-default" (click)="backToForm()"> Back </button>
+</div>
+<br/>
+<div>
+    <div class="sub-heading-topics-2">Form Validation</div>
+    This is about form validation. On how to perform validation on the UI. Here is an example of form validation in template driven form and reactive form. 
+    There can be multiple level of form validation, before sending the data to API and saving it. 
+    <br />
+    Following are few of the form validations.
+    <table class="table-border">
+        <tr class="table-border">
+            <td class="table-border">< input required /></td>
+            <td class="table-border">< input minLength="n" /></td>
+            <td class="table-border">< input maxLength="n"/></td>
+        </tr>
+        <tr>
+            <td class="table-border">< input pattern="[a-z]+" /></td>
+            <td class="table-border">< input min="n" /></td>
+            <td class="table-border">< input max="n" /></td>
+        </tr>
+        <tr>
+            <td class="table-border">< input step="2" /></td>
+            <td class="table-border">< form novalidate /></td>
+            <td></td>
+        </tr>
+    </table>
+</div>
+<div>
+    <b>Template Form Validation</b>
+    <br/>
+    Example :
+    <div>
+        <form #ceoForm="ngForm" (submit)="ceoFormSubmit()">
+            <table>
+                <tr>
+                    <td><label for="fullName">Full Name</label></td>
+                    <td>
+                        <input type="text" id="fullName" #fullName="ngModel" name="fullName" [(ngModel)]="ceoEmployee.name" required minlength="5" maxlength="15"/>
+                        <div *ngIf="fullName.invalid && (fullName.dirty || fullName.touched)">
+                            <span *ngIf="fullName.hasError('required')">Name is required.</span>
+                            <span *ngIf="fullName.hasError('minlength')">Min. length of 5</span>
+                            <span *ngIf="fullName.hasError('maxlength')">Max. length of 15</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="fullAddress">Full Address</label></td>
+                    <td>
+                        <textarea rows="3" cols="50"  id="fullAddress" #fullAddress="ngModel" name="fullAddress" [(ngModel)]="ceoEmployee.address" required minlength="10" maxlength="45"></textarea>
+                        <div *ngIf="fullAddress.invalid && (fullAddress.dirty || fullAddress.touched)">
+                            <span *ngIf="fullAddress.hasError('required')">Address is required.</span>
+                            <span *ngIf="fullAddress.hasError('minlength')">Min. length of 10</span>
+                            <span *ngIf="fullAddress.hasError('maxlength')">Max. length of 45</span>
+                        </div>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="ceoAge">Age</label></td>
+                    <td><select id="ceoAge" name="ceoAge" [(ngModel)]="ceoEmployee.age"><option *ngFor="let a of availableAges" value="{{a}}">{{a}}</option></select></td>
+                </tr>
+                <tr>
+                    <td><label for="ceoGender">Gender</label></td>
+                    <td><select id="ceoGender" name="ceoGender" [(ngModel)]="ceoEmployee.gender"><option *ngFor="let g of availableGender" value="{{g}}">{{g}}</option></select></td>
+                </tr>
+            </table>
+            <button type="submit" class="btn-default" [disabled]="!ceoForm.form.valid"> Submit </button>
+        </form>
+        {{ceoEmployee | json}}
+    </div>
+    <br/>
 </div>

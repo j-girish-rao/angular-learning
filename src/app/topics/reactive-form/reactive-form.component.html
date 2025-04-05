@@ -1,6 +1,95 @@
 <div>
     <label class="heading-topics">Reactive Forms</label>
 </div>
+Reactive forms provide model driven approach to handle form inputs whos values change over time, each change to the form state returns the new state which
+maintaines the integrity of the model between changes.
+<br/>
 <div>
-    <div class="sub-heading-topics-2">Reactive Forms</div>
+    <!-- <div class="sub-heading-topics-2">Reactive Forms</div> -->
+     Example : Simple form with 1 field either input name or click button to set value. The Form value which is set for name is accessible in html and component as well.
+     <br/>
+     Following are the ways how it can be accessed. Syntex : 
+     <br/> Html : {{accessNameHtml}}
+     <br/> Component : {{accessNameComponent}}
+     <br/>
+     <label for="name"> Input name </label>
+     <input id="name" type="text" [formControl]="name" /> or click to add default <button class="btn-default" (click)="updateNameValue()">Update Name </button>
+     <p>Value : {{name.value}}</p>
+</div>
+<br />
+<div>
+    Reactive forms provide two ways of grouping multiple related controls into a single input form. 
+    <br/>
+    1.  FormGroup defines a fixed set of controls that can be managed together.
+    <br/>
+    2. FormArray defines a dynamic form where we can add and remove controls at runtime.
+</div>
+<br/>
+<div>
+    <div class="sub-heading-topics-2">1. Using form group</div>
+    <div>
+        <form [formGroup]="profileForm" (ngSubmit)="formGroupSubmit()">
+            <table>
+                <tr>
+                    <td><label for="first-name">First name *</label></td>
+                    <td>:<input type="text" id="first-name" formControlName="firstName" required /></td>
+                </tr>
+                <tr>
+                    <td><label for="last-name">Last name *</label></td>
+                    <td>:<input type="text" id="last-name" formControlName="lastName" required /></td>
+                </tr>
+                <tr>
+                    <td><label for="age">Age</label></td>
+                    <td>:<input type="text" id="age" formControlName="age" /></td>
+                </tr>
+            </table>
+            <button type="submit" class="btn-default" [disabled]="!profileForm.valid"> Submit </button>
+        </form>
+    </div>
+    You submitted : {{formGroupValue}}
+</div>
+<br/>
+<div>
+    <div class="sub-heading-topics-2">Form Validation</div>
+    This is about form validation. On how to perform validation on the UI. Here is an example of form validation in template driven form and reactive form. 
+    There can be multiple level of form validation, before sending the data to API and saving it. 
+</div>
+<div>
+    <b>Reactive Form Validation</b>
+    <br/>
+    Example :
+    <div>
+        <form [formGroup]="employeeForm" (submit)="employeeFormSubmit()">
+            <table>
+                <tr>
+                    <td><label for="name">Name</label></td>
+                    <td>
+                        <input type="text" id="name" name="name" formControlName="name" required minlength="5" maxlength="15"/>
+                        <div *ngIf="name.invalid && (name.dirty || name.touched)">
+                            <span *ngIf="name.hasError('required')">Name is required.</span>
+                            <span *ngIf="name.hasError('minlength')">Min. length of 5</span>
+                            <span *ngIf="name.hasError('maxlength')">Max. length of 15</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="address">Address</label></td>
+                    <td>
+                        <textarea rows="3" cols="50"  id="address" name="address" formControlName="address"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="ceoAge">Age</label></td>
+                    <td><select id="ceoAge" name="ceoAge" formControlName="age"><option *ngFor="let a of availableAges" value="{{a}}">{{a}}</option></select></td>
+                </tr>
+                <tr>
+                    <td><label for="ceoGender">Gender</label></td>
+                    <td><select id="ceoGender" name="ceoGender"formControlName="gender"><option *ngFor="let g of availableGender" value="{{g}}">{{g}}</option></select></td>
+                </tr>
+            </table>
+            <button type="submit" class="btn-default" [disabled]="!employeeForm.valid"> Submit </button>
+        </form>
+        {{empFormValue}}
+    </div>
+    <br/>
 </div>

@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HighlightDirective } from './topics/directives/highlight.directive'; 
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -36,8 +37,10 @@ import { AngularRoutingComponent } from './topics/angular-routing/angular-routin
 import { TemplateFormComponent } from './topics/template-form/template-form.component';
 import { ReactiveFormComponent } from './topics/reactive-form/reactive-form.component';
 import { FormValidationComponent } from './topics/form-validation/form-validation.component';
+import { HttpClientComponent } from './topics/http-client/http-client.component';
 
 import { LogService } from './topics/dependency-injection/log.service';
+import { DataService } from './topics/http-client/data.service';
 import { RouterDataComponent } from './topics/angular-routing/router-data/router-data.component';
 import { ArChildRouteAComponent } from './topics/angular-routing/ar-child-route-a/ar-child-route-a.component';
 import { ArChildRouteBComponent } from './topics/angular-routing/ar-child-route-b/ar-child-route-b.component';
@@ -79,14 +82,17 @@ import { ArChildRouteBComponent } from './topics/angular-routing/ar-child-route-
     FormValidationComponent,
     RouterDataComponent,
     ArChildRouteAComponent,
-    ArChildRouteBComponent
+    ArChildRouteBComponent,
+    HttpClientComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [LogService],
+  providers: [LogService, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

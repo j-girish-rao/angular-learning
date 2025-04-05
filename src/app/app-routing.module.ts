@@ -25,6 +25,7 @@ import { RouterDataComponent } from './topics/angular-routing/router-data/router
 import { ArChildRouteAComponent } from './topics/angular-routing/ar-child-route-a/ar-child-route-a.component';
 import { ArChildRouteBComponent } from './topics/angular-routing/ar-child-route-b/ar-child-route-b.component';
 import { SampleGuardGuard } from './topics/angular-routing/sample-guard.guard';
+import { HttpClientComponent } from './topics/http-client/http-client.component';
 
 const routes: Routes = [
   { path: '', component: GettingStartedComponent },
@@ -54,6 +55,7 @@ const routes: Routes = [
   { path: 'router-data/:data', component: RouterDataComponent},
   { path: 'template-form', component: TemplateFormComponent},
   { path: 'reactive-form', component: ReactiveFormComponent},
+  { path: 'http-client', component: HttpClientComponent},
   { path: 'test', component: TestParentComponent },
   { path: '**', component: GettingStartedComponent },
 ];

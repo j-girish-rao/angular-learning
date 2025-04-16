@@ -1,0 +1,25 @@
+<div>
+    <label class="heading-topics">Animations</label>
+</div>
+<div>
+    Animation provide the illumination of motion. Elements change styling overtime.
+    Angular can animate any property that the browser considers animatable.
+    This includes porition, sizes, transforms, colors, borders etc.
+</div>
+<br/>
+<div>
+    To implement animations import browser animation module in app module.
+    And import required in component. 
+    <br/>
+    To implement animation define animate in component which trigerres animation. In this case 'openClose'.
+    Following is an example.
+</div>
+<div>
+    <div>
+        <button (click)="toggleBool()" class="btn-default">Click</button>
+        {{isOpen}}
+    </div>
+    <div [@openClose]="isOpen ? 'open' : 'closed'">
+        Box is {{isOpen ? 'Open' : 'Closed'}}
+    </div>
+</div>

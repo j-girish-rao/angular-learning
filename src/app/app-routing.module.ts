@@ -26,6 +26,8 @@ import { ArChildRouteAComponent } from './topics/angular-routing/ar-child-route-
 import { ArChildRouteBComponent } from './topics/angular-routing/ar-child-route-b/ar-child-route-b.component';
 import { SampleGuardGuard } from './topics/angular-routing/sample-guard.guard';
 import { HttpClientComponent } from './topics/http-client/http-client.component';
+import { HttpInterceptorsComponent } from './topics/http-interceptors/http-interceptors.component';
+import { AngularAnimationsComponent } from './topics/angular-animations/angular-animations.component';
 
 const routes: Routes = [
   { path: '', component: GettingStartedComponent },
@@ -56,6 +58,8 @@ const routes: Routes = [
   { path: 'template-form', component: TemplateFormComponent},
   { path: 'reactive-form', component: ReactiveFormComponent},
   { path: 'http-client', component: HttpClientComponent},
+  { path: 'http-interceptor', component: HttpInterceptorsComponent },
+  { path: 'angular-anime', component: AngularAnimationsComponent },
   { path: 'test', component: TestParentComponent },
   { path: '**', component: GettingStartedComponent },
 ];

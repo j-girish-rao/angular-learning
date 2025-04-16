@@ -44,6 +44,10 @@ import { DataService } from './topics/http-client/data.service';
 import { RouterDataComponent } from './topics/angular-routing/router-data/router-data.component';
 import { ArChildRouteAComponent } from './topics/angular-routing/ar-child-route-a/ar-child-route-a.component';
 import { ArChildRouteBComponent } from './topics/angular-routing/ar-child-route-b/ar-child-route-b.component';
+import { HttpInterceptorsComponent } from './topics/http-interceptors/http-interceptors.component';
+import { AngularAnimationsComponent } from './topics/angular-animations/angular-animations.component';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -83,14 +87,17 @@ import { ArChildRouteBComponent } from './topics/angular-routing/ar-child-route-
     RouterDataComponent,
     ArChildRouteAComponent,
     ArChildRouteBComponent,
-    HttpClientComponent
+    HttpClientComponent,
+    HttpInterceptorsComponent,
+    AngularAnimationsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [LogService, DataService],
   bootstrap: [AppComponent]

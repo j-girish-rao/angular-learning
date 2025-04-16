@@ -1,3 +1,15 @@
 <div>
     <label class="heading-topics">Http Client</label>
 </div>
+<div>
+    This is a liberary from Angular which helps in making http calls. To use this you need to import angular http module in modules and refer them in imports.
+    <br/>
+    Then create a service with DI (Depedency Injection) and add them in providers. Now you can have you http calls in this data service class. 
+</div>
+<br/>
+<div>
+    Following we are making a http call to get the data and display it.
+</div>
+<div>
+    <div *ngFor="let d of drinksData.drinks"> {{d.idDrink}} | {{d.strDrink}} | {{d.strInstructions}} </div>
+</div>
